@@ -1,13 +1,14 @@
 <script setup>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import Home from './components/Home.vue'
 </script>
 
 <template>
   <div id="app">
     <Header />
     <main>
-      <!-- Nội dung sẽ được thêm sau -->
+      <Home />
     </main>
     <Footer />
   </div>

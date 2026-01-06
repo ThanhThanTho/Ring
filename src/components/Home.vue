@@ -1,243 +1,58 @@
 <template>
   <div class="home-page">
-    <!-- Section 1: Hero Slider -->
+    <!-- Section 1: Hero (ảnh slider + chữ đổi riêng) -->
     <section class="vc_section section-slider home-page-section-1">
-      <div class="avo-slider style-1">
-        <div class="slider-box">
-          <div class="caption-box clearfix">
-            <div class="slider-content">
-              <p class="slider-subtitle">Welcome to</p>
-              <div class="slider-hidden">
-                <h3>MINELOG</h3>
-              </div>
-              <p class="slider-text">
-                Grow your business with the best logistics company in Malaysia. Minelog offers integrated logistics services to meet your needs, from freight forwarding to warehousing, transportation and distribution.
-              </p>
-              <div class="btn-relative">
-                <a href="/support">
-                  Get Started
-                  <img src="/vite.svg" alt="arrow" style="width: 24px; height: 24px; display: inline-block; margin-left: 8px;" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 2: Search/Tracking Form -->
-    <section class="vc_section home-page-section-2">
-      <div class="vc_row">
-        <div class="vc_col-sm-6">
-          <div class="vc_column-inner">
-            <div class="wpb_wrapper">
-              <div class="wpb_text_column wpb_content_element">
-                <div class="wpb_wrapper">
-                  <p>Track Your Shipment</p>
-                </div>
-              </div>
-              <div class="wpb_raw_code wpb_content_element wpb_raw_html post-login">
-                <div class="wpb_wrapper">
-                  <div class="tracking-form">
-                    <select>
-                      <option>Select Service</option>
-                      <option>Air Freight</option>
-                      <option>Sea Freight</option>
-                      <option>Road Transport</option>
-                    </select>
-                    <button type="button">Track</button>
-                  </div>
+      <div
+        class="hero-slider"
+        @mousedown="onHeroPointerDown"
+        @mouseup="onHeroPointerUp"
+        @mouseleave="onHeroPointerLeave"
+        @touchstart.passive="onHeroPointerDown"
+        @touchend.passive="onHeroPointerUp"
+      >
+        <transition name="hero-image-fade">
+          <div
+            class="hero-image-layer"
+            :key="heroImageIndex"
+            :style="{ backgroundImage: `url(${heroImages[heroImageIndex]})` }"
+          ></div>
+        </transition>
+        <div class="hero-overlay">
+          <div class="slider-box">
+            <div class="caption-box clearfix">
+              <div class="slider-content">
+                <h3 class="hero-heading-prefix">All-in-one logistics for</h3>
+                <transition name="hero-text-fade" mode="out-in">
+                  <h2
+                    class="hero-heading-main"
+                    :key="heroWordIndex"
+                  >
+                    {{ heroWords[heroWordIndex] }}
+                  </h2>
+                </transition>
+                <p class="slider-text">
+                  Minelog is a One-Stop Total Logistics Solution Provider, focused on customer
+                  needs.
+                </p>
+                <div class="btn-relative">
+                  <a href="/support">
+                    Get Started
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="vc_col-sm-6">
-          <div class="vc_column-inner">
-            <div class="wpb_wrapper">
-              <div class="wpb_raw_code wpb_content_element wpb_raw_html post-login">
-                <div class="wpb_wrapper">
-                  <div class="tracking-form">
-                    <input type="text" placeholder="Enter Tracking Number" />
-                    <a href="/support">Get a Quote</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 3: Stats -->
-    <section class="vc_section home-page-section-3">
-      <div class="vc_row">
-        <div class="vc_col-sm-6">
-          <div class="vc_column-inner">
-            <div class="wpb_wrapper">
-              <div class="wpb_text_column wpb_content_element">
-                <div class="wpb_wrapper">
-                  <span class="stat-number">60+</span>
-                  <span class="stat-label">Years of Experience</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="vc_col-sm-6">
-          <div class="vc_column-inner">
-            <div class="wpb_wrapper">
-              <div class="wpb_text_column wpb_content_element">
-                <div class="wpb_wrapper">
-                  <span class="stat-number">1000+</span>
-                  <span class="stat-label">Happy Clients</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 4: Services Grid -->
-    <section class="vc_section home-page-section-4">
-      <div class="vc_row">
-        <div class="vc_col-sm-12">
-          <div class="vc_column-inner">
-            <div class="wpb_wrapper">
-              <div class="vc_basic_grid vc_grid-container-wrapper vc_clearfix vc_grid-animation-none">
-                <div class="vc_grid vc_row vc_grid-gutter-30px">
-                  <div class="vc_grid-item" v-for="service in services" :key="service.id">
-                    <div class="vc_grid-item-mini">
-                      <div class="vc_gitem-animated-block">
-                        <div class="vc_gitem-zone vc_gitem-zone-a">
-                          <div class="service-image" :style="{ backgroundImage: `url(${service.image})` }"></div>
-                        </div>
-                        <div class="vc_gitem-zone vc_gitem-zone-b vc_gitem-is-link">
-                          <div class="vc_custom_heading vc_gitem-post-data vc_gitem-post-data-source-post_title">
-                            <h4>{{ service.title }}</h4>
-                            <p>{{ service.description }}</p>
-                          </div>
-                          <a href="#" class="btn-link-text">View more</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 5: Insights/Testimonials Slider -->
-    <section class="vc_section section-content vc_row-o-full-height vc_section-o-content-middle vc_section-flex home-page-section-5">
-      <div class="vc_row">
-        <div class="vc_col-sm-12">
-          <div class="vc_column-inner">
-            <div class="wpb_wrapper">
-              <h2>Latest Insights</h2>
-              <div class="wpb_gallery_slides">
-                <ul class="slides">
-                  <li v-for="insight in insights" :key="insight.id">
-                    <a href="#">
-                      <img :src="insight.image" :alt="insight.title" />
-                    </a>
-                    <div>
-                      <div class="content-box">
-                        <label>{{ insight.category }}</label>
-                        <h2><a href="#">{{ insight.title }}</a></h2>
-                        <p>{{ insight.excerpt }}</p>
-                        <a href="#" class="minelog-custom-read-link">Read More</a>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 6: Testimonials Carousel -->
-    <section class="vc_section home-page-section-6">
-      <div class="vc_row">
-        <div class="vc_col-sm-12">
-          <div class="vc_column-inner">
-            <div class="wpb_wrapper">
-              <div class="wpb_text_column wpb_content_element">
-                <div class="wpb_wrapper">
-                  <h2>What Our Clients Say</h2>
-                </div>
-              </div>
-              <div class="owl-carousel testimonials-carousel">
-                <div class="testimonial-item" v-for="testimonial in testimonials" :key="testimonial.id">
-                  <h2>{{ testimonial.number }}</h2>
-                  <h2>{{ testimonial.title }}</h2>
-                  <p>{{ testimonial.content }}</p>
-                  <h5>{{ testimonial.name }}</h5>
-                  <h6>{{ testimonial.position }}</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 7: Partners/Logos -->
-    <section class="vc_section home-page-section-7">
-      <div class="vc_row">
-        <div class="vc_col-sm-12">
-          <div class="vc_column-inner">
-            <div class="wpb_wrapper">
-              <div class="owl-carousel partners-carousel">
-                <div class="partner-logo" v-for="partner in partners" :key="partner.id">
-                  <img :src="partner.logo" :alt="partner.name" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 8: Contact Form -->
-    <section class="vc_section home-page-section-8">
-      <div class="vc_row">
-        <div class="vc_col-sm-6">
-          <div class="vc_column-inner">
-            <div class="wpb_wrapper">
-              <div class="contact-image"></div>
-            </div>
-          </div>
-        </div>
-        <div class="vc_col-sm-6">
-          <div class="vc_column-inner">
-            <div class="wpb_wrapper">
-              <h2>Get In Touch</h2>
-              <p>Fill out the form below and we'll get back to you as soon as possible.</p>
-              <form class="contact-form">
-                <div class="form-group">
-                  <label>Name <em>*</em></label>
-                  <input type="text" required />
-                </div>
-                <div class="form-group">
-                  <label>Email <em>*</em></label>
-                  <input type="email" required />
-                </div>
-                <div class="form-group">
-                  <label>Phone</label>
-                  <input type="tel" />
-                </div>
-                <div class="form-group">
-                  <label>Message <em>*</em></label>
-                  <textarea required></textarea>
-                </div>
-                <input type="submit" value="Submit" />
-              </form>
+          <!-- Dots hiển thị index slide hiện tại -->
+          <div class="hero-slider-controls">
+            <div class="hero-dots">
+              <button
+                v-for="(image, index) in heroImages"
+                :key="index"
+                type="button"
+                class="dot"
+                :class="{ active: index === heroImageIndex }"
+                @click="onHeroDotClick(index)"
+              ></button>
             </div>
           </div>
         </div>
@@ -247,7 +62,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const services = ref([
   { id: 1, title: 'Cold Chain Logistics', description: 'Temperature-controlled logistics solutions', image: '/vite.svg' },
@@ -258,6 +73,33 @@ const services = ref([
   { id: 6, title: 'Customs Clearance', description: 'Expert customs clearance services', image: '/vite.svg' }
 ])
 
+// Hero: 5 ảnh slide + chữ thay đổi riêng (chữ nằm lớp trên ảnh)
+const heroImages = ref([
+  '/images/home-slider-1.webp',
+  '/images/home-slider-2.jpg',
+  '/images/home-slider-1.webp',
+  '/images/home-slider-2.jpg',
+  '/images/home-slider-1.webp'
+])
+
+const heroWords = ref([
+  'FMCG.',
+  'rubber gloves.',
+  'industrial products.',
+  'auto parts.',
+  'household products.',
+  'renewable energy products.',
+  'commodity.'
+])
+const heroWordIndex = ref(0)
+const HERO_TEXT_INTERVAL = 3000
+let heroTextIntervalId
+
+const heroImageIndex = ref(0)
+const HERO_IMAGE_INTERVAL = 6000
+let heroImageIntervalId
+
+// Insights tạm để nguyên (section 5)
 const insights = ref([
   { id: 1, category: 'Logistics', title: 'Latest Trends in Supply Chain', excerpt: 'Exploring the latest trends and innovations...', image: '/vite.svg' },
   { id: 2, category: 'Industry', title: 'Future of Logistics', excerpt: 'How technology is transforming logistics...', image: '/vite.svg' }
@@ -273,6 +115,111 @@ const partners = ref([
   { id: 2, name: 'Partner 2', logo: '/vite.svg' },
   { id: 3, name: 'Partner 3', logo: '/vite.svg' }
 ])
+
+// Hero image swipe state
+let heroDragStartX = 0
+const HERO_SWIPE_THRESHOLD = 50
+
+// Hero text auto change
+const startHeroTextLoop = () => {
+  stopHeroTextLoop()
+  heroTextIntervalId = window.setInterval(() => {
+    heroWordIndex.value = (heroWordIndex.value + 1) % heroWords.value.length
+  }, HERO_TEXT_INTERVAL)
+}
+
+const stopHeroTextLoop = () => {
+  if (heroTextIntervalId) {
+    window.clearInterval(heroTextIntervalId)
+    heroTextIntervalId = undefined
+  }
+}
+
+// Hero image auto change
+const startHeroImageLoop = () => {
+  stopHeroImageLoop()
+  if (!heroImages.value.length) return
+  heroImageIntervalId = window.setInterval(() => {
+    heroNextImage()
+  }, HERO_IMAGE_INTERVAL)
+}
+
+const stopHeroImageLoop = () => {
+  if (heroImageIntervalId) {
+    window.clearInterval(heroImageIntervalId)
+    heroImageIntervalId = undefined
+  }
+}
+
+const heroNextImage = () => {
+  heroImageIndex.value = (heroImageIndex.value + 1) % heroImages.value.length
+}
+
+const heroPrevImage = () => {
+  heroImageIndex.value =
+    (heroImageIndex.value - 1 + heroImages.value.length) % heroImages.value.length
+}
+
+const heroGotoImage = (index) => {
+  heroImageIndex.value = index
+}
+
+const restartHeroImageLoop = () => {
+  startHeroImageLoop()
+}
+
+const getClientX = (event) => {
+  if (event.touches && event.touches.length) {
+    return event.touches[0].clientX
+  }
+  if (event.changedTouches && event.changedTouches.length) {
+    return event.changedTouches[0].clientX
+  }
+  return event.clientX
+}
+
+const onHeroPointerDown = (event) => {
+  heroDragStartX = getClientX(event)
+  stopHeroImageLoop()
+}
+
+const onHeroPointerUp = (event) => {
+  if (!heroImages.value.length) {
+    restartHeroImageLoop()
+    return
+  }
+
+  const endX = getClientX(event)
+  const delta = endX - heroDragStartX
+
+  if (delta > HERO_SWIPE_THRESHOLD) {
+    heroPrevImage()
+  } else if (delta < -HERO_SWIPE_THRESHOLD) {
+    heroNextImage()
+  }
+
+  restartHeroImageLoop()
+}
+
+const onHeroPointerLeave = () => {
+  restartHeroImageLoop()
+}
+
+const onHeroDotClick = (index) => {
+  stopHeroImageLoop()
+  heroGotoImage(index)
+  restartHeroImageLoop()
+}
+
+onMounted(() => {
+  startHeroTextLoop()
+  startHeroImageLoop()
+})
+
+onUnmounted(() => {
+  stopHeroTextLoop()
+  stopHeroImageLoop()
+})
 </script>
 
 <style scoped>
@@ -285,20 +232,34 @@ const partners = ref([
 
 /* Section 1: Hero */
 .home-page-section-1 {
-  background: linear-gradient(135deg, #026937 0%, #014625 100%);
   min-height: 550px;
   position: relative;
   padding: 0;
+  overflow: hidden;
 }
 
-.home-page-section-1 .avo-slider {
+.hero-slider {
+  position: relative;
   height: 550px;
 }
 
+.hero-image-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
 .home-page-section-1 .slider-box {
-  padding: 0;
-  margin: 0;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 150px 80px 50px;
   height: 100%;
@@ -311,29 +272,25 @@ const partners = ref([
   padding: 0px !important;
 }
 
-.home-page-section-1 .slider-subtitle {
-  font-family: "Poppins" !important;
+.hero-heading-prefix {
+  font-family: "Poppins";
   font-size: 50px;
   font-weight: 400;
   line-height: 70px;
-  letter-spacing: 0em;
   text-align: left;
   text-transform: unset;
   color: #fff;
-  height: 70px;
   margin: 0;
 }
 
-.home-page-section-1 .slider-hidden h3 {
-  font-family: "Poppins" !important;
+.hero-heading-main {
+  font-family: "Poppins";
   font-size: 50px;
   font-weight: 700;
   line-height: 70px;
-  letter-spacing: 0em;
   text-align: left;
   color: #fff;
   margin: 8px 0 10px 0;
-  height: 70px;
 }
 
 .home-page-section-1 .slider-text {
@@ -369,6 +326,57 @@ const partners = ref([
 .home-page-section-1 .btn-relative a:hover {
   background: unset;
   color: #fff;
+}
+
+.hero-slider-controls {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.hero-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.hero-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  padding: 0;
+}
+
+.hero-dots .dot.active {
+  background: #FF9900;
+}
+
+/* Text fade animation */
+.hero-text-fade-enter-active,
+.hero-text-fade-leave-active {
+  transition: opacity 0.6s ease;
+}
+
+.hero-text-fade-enter-from,
+.hero-text-fade-leave-to {
+  opacity: 0;
+}
+
+/* Image fade animation */
+.hero-image-fade-enter-active,
+.hero-image-fade-leave-active {
+  transition: opacity 1s ease;
+}
+
+.hero-image-fade-enter-from,
+.hero-image-fade-leave-to {
+  opacity: 0;
 }
 
 /* Section 2: Tracking */
