@@ -58,19 +58,197 @@
         </div>
       </div>
     </section>
+
+    <!-- Section 4: Services & Solutions -->
+    <section class="vc_section home-page-section-4">
+      <div class="vc_row wpb_row vc_row-fluid">
+        <div class="wpb_column vc_column_container vc_col-sm-12">
+          <div class="vc_column-inner">
+            <div class="wpb_wrapper">
+              <div class="wpb_text_column wpb_content_element">
+                <div class="wpb_wrapper">
+                  <h2>Services &amp; Solutions</h2>
+                  <p>Our comprehensive logistics services and solutions will streamline your operations,
+                    maximize efficiency, and drive business growth.</p>
+                </div>
+              </div>
+
+              <div class="vc_grid-container-wrapper vc_clearfix">
+                <div class="vc_grid vc_row vc_grid-gutter-30px">
+                  <!-- Hàng 1: 3 services -->
+                  <div class="vc_grid-item vc_col-sm-4" v-for="service in services.slice(0, 3)" :key="service.id">
+                    <div class="vc_grid-item-mini">
+                      <div class="vc_gitem-animated-block">
+                        <div class="vc_gitem-zone vc_gitem-zone-a">
+                          <div class="service-image" :style="{ backgroundImage: `url(${service.image})` }"></div>
+                        </div>
+                        <div class="vc_gitem-zone vc_gitem-zone-b">
+                          <div class="vc_custom_heading vc_gitem-post-data">
+                            <h4>{{ service.title }}</h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Hàng 2: 2 services căn giữa -->
+                <div class="vc_grid vc_row vc_grid-gutter-30px vc_grid-row-2">
+                  <div class="vc_grid-item vc_col-sm-4" v-for="service in services.slice(3, 5)" :key="service.id">
+                    <div class="vc_grid-item-mini">
+                      <div class="vc_gitem-animated-block">
+                        <div class="vc_gitem-zone vc_gitem-zone-a">
+                          <div class="service-image" :style="{ backgroundImage: `url(${service.image})` }"></div>
+                        </div>
+                        <div class="vc_gitem-zone vc_gitem-zone-b">
+                          <div class="vc_custom_heading vc_gitem-post-data">
+                            <h4>{{ service.title }}</h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Associations & Partners -->
+    <section class="vc_section home-page-section-7">
+      <div class="container">
+        <div class="wsite-section-elements">
+          <!-- Associations -->
+          <h2 class="wsite-content-title">
+            <a href="#">We proudly represent prestigious logistics associations</a>
+          </h2>
+          
+          <div class="wsite-multicol">
+            <div class="wsite-multicol-table-wrap">
+              <div class="associations-logos">
+                <div 
+                  v-for="(logo, index) in associationsLogos" 
+                  :key="index"
+                  class="logo-item"
+                >
+                  <a :href="logo.link || '#'">
+                    <img :src="logo.image" :alt="logo.alt || 'Logo'" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wsite-spacer"></div>
+
+          <!-- Partners -->
+          <h2 class="wsite-content-title">
+            We earned trust from our strategic partners
+          </h2>
+
+          <div class="wsite-spacer-small"></div>
+
+          <div class="wsite-multicol">
+            <div class="wsite-multicol-table-wrap">
+              <div class="partners-logos">
+                <div 
+                  v-for="(logo, index) in partnersLogos" 
+                  :key="index"
+                  class="logo-item"
+                >
+                  <a :href="logo.link || '#'">
+                    <img :src="logo.image" :alt="logo.alt || 'Logo'" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wsite-spacer-hr"></div>
+          <hr class="styled-hr" />
+          <div class="wsite-spacer-hr"></div>
+
+          <div class="wsite-multicol">
+            <div class="wsite-multicol-table-wrap">
+              <div class="partners-logos">
+                <div 
+                  v-for="(logo, index) in partnersLogosRow2" 
+                  :key="index"
+                  class="logo-item"
+                >
+                  <a :href="logo.link || '#'">
+                    <img :src="logo.image" :alt="logo.alt || 'Logo'" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Markets: Thị trường -->
+    <section class="vc_section home-page-section-markets">
+      <div class="container">
+        <div class="markets-content">
+          <h2 class="markets-heading">Thị trường</h2>
+          <p class="markets-description">
+            Real Logistics tự hào làm việc với các công ty lớn trên khắp Châu Á - Thái Bình Dương, Châu Âu, Bắc Mỹ và nhiều nơi khác. Chúng tôi vận chuyển hàng hóa đến hơn 120 quốc gia và hơn 300 địa điểm, giúp kết nối các thị trường toàn cầu và phát triển công ty nhờ vào dịch vụ logistics đáng tin cậy và hiệu quả.
+          </p>
+          
+          <div class="markets-map-container">
+            <!-- Map image -->
+            <div class="markets-map-image">
+              <img 
+                src="https://reallogistics.vn/_ipx/f_webp/images/home/home-market-desktop.webp" 
+                alt="markets map" 
+                loading="lazy"
+                class="map-img"
+              />
+            </div>
+            
+            <!-- SVG lines overlay -->
+            <div class="markets-map-lines">
+              <svg width="269" height="145" viewBox="0 0 269 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M268 144.332C256 126.832 106 -16.168 0.5 2.832" stroke="#EE921D" stroke-width="2" stroke-dasharray="3 3"></path>
+              </svg>
+              <svg width="264" height="34" viewBox="0 0 264 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M263 7.33301C247 -4.66707 52 2.83317 0.5 32.8332" stroke="#EE921D" stroke-width="2" stroke-dasharray="3 3"></path>
+              </svg>
+              <svg width="23" height="64" viewBox="0 0 23 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 63.3335C17.5 44.8336 -20.5 -1.66651 18.5 1.83375" stroke="#EE921D" stroke-width="2" stroke-dasharray="3 3"></path>
+              </svg>
+              <svg width="464" height="190" viewBox="0 0 464 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 188.833C55.5 24.333 277 -23.1669 463.5 12.3333" stroke="#EE921D" stroke-width="4" stroke-dasharray="8 8"></path>
+              </svg>
+              <svg width="625" height="120" viewBox="0 0 625 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M623.5 118.834C603 84.8341 195 -57.6661 0.5 28.3337" stroke="#EE921D" stroke-width="2" stroke-dasharray="3 3"></path>
+              </svg>
+              <svg width="90" height="120" viewBox="0 0 90 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M85.5003 119.334C99.5002 93.3342 55.9999 3.83398 1 1.83398" stroke="#EE921D" stroke-width="2" stroke-dasharray="3 3"></path>
+              </svg>
+              <svg width="471" height="127" viewBox="0 0 471 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 124.832C172 -66.3342 353 19.3316 470 39.3321" stroke="#EE921D" stroke-width="4" stroke-dasharray="8 8"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
+// Services & Solutions - chỉ 5 services
 const services = ref([
-  { id: 1, title: 'Cold Chain Logistics', description: 'Temperature-controlled logistics solutions', image: '/vite.svg' },
-  { id: 2, title: 'Air Freight', description: 'Fast and reliable air cargo services', image: '/vite.svg' },
-  { id: 3, title: 'Sea Freight', description: 'Cost-effective ocean freight solutions', image: '/vite.svg' },
-  { id: 4, title: 'Warehouse', description: 'Secure warehousing facilities', image: '/vite.svg' },
-  { id: 5, title: 'Haulage & Transport', description: 'Comprehensive road transport services', image: '/vite.svg' },
-  { id: 6, title: 'Customs Clearance', description: 'Expert customs clearance services', image: '/vite.svg' }
+  { id: 1, title: 'Sea Freight', image: '/images/sea-freight.png' },
+  { id: 2, title: 'Air Freight', image: '/images/air-freight.png' },
+  { id: 3, title: 'Land Freight', image: '/images/land-freight.jpg' },
+  { id: 4, title: 'Custom Clearance', image: '/images/customer-clearance.jpg' },
+  { id: 5, title: 'Warehouse', image: '/images/warehouse.png' }
 ])
 
 // Hero: 5 ảnh slide + chữ thay đổi riêng (chữ nằm lớp trên ảnh)
@@ -110,10 +288,32 @@ const testimonials = ref([
   { id: 2, number: '02', title: 'Reliable Partner', content: 'We trust MINELOG for all our logistics needs.', name: 'Jane Smith', position: 'Operations Manager' }
 ])
 
-const partners = ref([
-  { id: 1, name: 'Partner 1', logo: '/vite.svg' },
-  { id: 2, name: 'Partner 2', logo: '/vite.svg' },
-  { id: 3, name: 'Partner 3', logo: '/vite.svg' }
+// Associations logos (5 logos)
+const associationsLogos = ref([
+  { image: '/images/carrier-logo-build-001_orig.png', link: '#' },
+  { image: '/images/carrier-logo-build-002_orig.png', link: '#' },
+  { image: '/images/carrier-logo-build-003_orig.png', link: '#' },
+  { image: '/images/carrier-logo-build-005_orig.png', link: '#' },
+])
+
+// Partners logos row 1 (shuffled)
+const partnersLogos = ref([
+  { image: '/images/untitled-007_orig.png', link: '#' },
+  { image: '/images/untitled-001_orig.png', link: '#' },
+  { image: '/images/untitled-010_orig.png', link: '#' },
+  { image: '/images/untitled-004_orig.png', link: '#' },
+  { image: '/images/untitled-012_orig.png', link: '#' },
+  { image: '/images/untitled-002_orig.png', link: '#' }
+])
+
+// Partners logos row 2 (shuffled)
+const partnersLogosRow2 = ref([
+  { image: '/images/untitled-009_orig.png', link: '#' },
+  { image: '/images/untitled-005_orig.png', link: '#' },
+  { image: '/images/untitled-008_orig.png', link: '#' },
+  { image: '/images/untitled-003_orig.png', link: '#' },
+  { image: '/images/untitled-011_orig.png', link: '#' },
+  { image: '/images/untitled-006_orig.png', link: '#' }
 ])
 
 // Hero image swipe state
@@ -225,6 +425,12 @@ onUnmounted(() => {
 <style scoped>
 /* Import CSS từ HTML structure */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Ensure Poppins font is loaded */
+@font-face {
+  font-family: 'Poppins';
+  font-display: swap;
+}
 
 .home-page {
   width: 100%;
@@ -537,14 +743,51 @@ onUnmounted(() => {
   margin: 0 auto;
 }
 
+.home-page-section-4 .wpb_text_column {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.home-page-section-4 .wpb_text_column h2 {
+  font-family: 'Poppins';
+  font-size: 36px;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 20px 0;
+}
+
+.home-page-section-4 .wpb_text_column p {
+  font-family: 'Poppins';
+  font-size: 16px;
+  color: #4F5F58;
+  margin: 0;
+}
+
+.home-page-section-4 .vc_grid-container-wrapper {
+  width: 100%;
+}
+
 .home-page-section-4 .vc_grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  justify-content: center;
   gap: 30px;
+  margin-bottom: 30px;
 }
 
 .home-page-section-4 .vc_grid-item {
-  margin-bottom: 0;
+  flex: 0 0 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+}
+
+.home-page-section-4 .vc_grid-row-2 {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.home-page-section-4 .vc_grid-row-2 .vc_grid-item {
+  flex: 0 0 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
 }
 
 .vc_gitem-animated-block {
@@ -594,15 +837,8 @@ onUnmounted(() => {
   font-family: 'Poppins';
   font-size: 24px;
   font-weight: 600;
-  margin: 0 0 10px 0;
-}
-
-.vc_gitem-zone-b p {
-  color: #FBFBFB !important;
-  font-family: 'Poppins';
-  font-size: 16px;
   margin: 0;
-  line-height: 1.5;
+  text-align: left;
 }
 
 .btn-link-text {
@@ -807,24 +1043,232 @@ onUnmounted(() => {
   margin: 0;
 }
 
-/* Section 7: Partners */
+/* Section 7: Associations & Partners */
 .home-page-section-7 {
-  padding: 31px 35px 31px 50px;
+  padding: 80px 70px;
   background: #fff;
 }
 
-.partners-carousel {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
+.home-page-section-7 .container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.partner-logo img {
-  height: 140px;
+.wsite-content-title {
+  font-family: 'Poppins';
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+  margin: 0 0 40px 0;
+}
+
+.wsite-content-title a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.wsite-content-title a:hover {
+  color: #026937;
+}
+
+.wsite-spacer {
+  height: 45px;
+}
+
+.wsite-spacer-small {
+  height: 23px;
+}
+
+.wsite-spacer-hr {
+  height: 20px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.styled-hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 0;
+}
+
+/* Associations logos - 5 logos */
+.associations-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.associations-logos .logo-item {
+  flex: 0 0 calc(20% - 30px);
+  max-width: calc(20% - 30px);
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.associations-logos .logo-item img {
   width: auto;
+  max-width: 100%;
+  height: auto;
   object-fit: contain;
+}
+
+/* Partners logos - 6 logos per row */
+.partners-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.partners-logos .logo-item {
+  flex: 0 0 calc(16.666% - 30px);
+  max-width: calc(16.666% - 30px);
+  padding: 0 15px;
+  text-align: center;
+}
+
+.partners-logos .logo-item img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Section Markets: Thị trường */
+.home-page-section-markets {
+  padding: 80px 70px;
+  background: #f4f4f4;
+}
+
+.home-page-section-markets .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.markets-content {
+  text-align: justify;
+}
+
+.markets-heading {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 140%;
+  color: #000;
+  margin: 0 0 20px 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.markets-description {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4F5F58;
+  margin: 0 0 40px 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.markets-map-container {
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.markets-map-image {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.map-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.markets-map-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.markets-map-lines svg {
+  position: absolute;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  z-index: 100;
+  pointer-events: auto;
+}
+
+/* Position các SVG lines - giữ nguyên viewBox, chỉ điều chỉnh vị trí */
+.markets-map-lines svg:nth-child(1) {
+  top: 8%;
+  right: 12%;
+  width: 269px;
+  height: 145px;
+}
+
+.markets-map-lines svg:nth-child(2) {
+  top: 18%;
+  left: 8%;
+  width: 264px;
+  height: 34px;
+}
+
+.markets-map-lines svg:nth-child(3) {
+  top: 28%;
+  right: 3%;
+  width: 23px;
+  height: 64px;
+}
+
+.markets-map-lines svg:nth-child(4) {
+  top: 12%;
+  left: 3%;
+  width: 464px;
+  height: 190px;
+}
+
+.markets-map-lines svg:nth-child(5) {
+  bottom: 22%;
+  right: 8%;
+  width: 625px;
+  height: 120px;
+}
+
+.markets-map-lines svg:nth-child(6) {
+  bottom: 12%;
+  left: 6%;
+  width: 90px;
+  height: 120px;
+}
+
+.markets-map-lines svg:nth-child(7) {
+  bottom: 8%;
+  left: 18%;
+  width: 471px;
+  height: 127px;
 }
 
 /* Section 8: Contact */
@@ -956,6 +1400,61 @@ onUnmounted(() => {
   .home-page-section-1 .slider-box {
     padding: 120px 40px 40px;
   }
+
+  /* Tablet: Section 4 - mỗi service 1 hàng */
+  .home-page-section-4 {
+    padding: 60px 40px !important;
+  }
+
+  .home-page-section-4 .vc_grid,
+  .home-page-section-4 .vc_grid-row-2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-page-section-4 .vc_grid-item {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .home-page-section-7 {
+    padding: 60px 40px !important;
+  }
+
+  .associations-logos .logo-item {
+    flex: 0 0 calc(33.333% - 30px) !important;
+    max-width: calc(33.333% - 30px) !important;
+  }
+
+  .partners-logos .logo-item {
+    flex: 0 0 calc(33.333% - 30px) !important;
+    max-width: calc(33.333% - 30px) !important;
+  }
+
+  .home-page-section-markets {
+    padding: 60px 40px !important;
+  }
+
+  .markets-heading {
+    font-size: 28px;
+  }
+
+  .markets-description {
+    font-size: 15px;
+  }
+
+  .markets-map-lines svg {
+    display: none;
+  }
+
+  .markets-map-lines svg:nth-child(4),
+  .markets-map-lines svg:nth-child(5),
+  .markets-map-lines svg:nth-child(7) {
+    display: block;
+    width: 200px !important;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -1026,6 +1525,54 @@ onUnmounted(() => {
 
   .home-page-section-4 {
     padding: 40px 16px !important;
+  }
+
+  .home-page-section-4 .vc_grid,
+  .home-page-section-4 .vc_grid-row-2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-page-section-4 .vc_grid-item {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .home-page-section-7 {
+    padding: 40px 16px !important;
+  }
+
+  .wsite-content-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .associations-logos .logo-item,
+  .partners-logos .logo-item {
+    flex: 0 0 calc(50% - 30px) !important;
+    max-width: calc(50% - 30px) !important;
+    margin-bottom: 20px;
+  }
+
+  .home-page-section-markets {
+    padding: 40px 16px !important;
+  }
+
+  .markets-heading {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .markets-description {
+    font-size: 14px;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .markets-map-lines svg {
+    display: none;
   }
 
   .home-page-section-5 {
