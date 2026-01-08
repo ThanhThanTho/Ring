@@ -14,14 +14,14 @@
               <img
                 alt="Logo"
                 class="logo1 avo-logo-dark"
-                style="height: 25px"
-                src="/vite.svg"
+                style="height: 70px"
+                src="/images/logo.jpg"
               />
               <img
                 alt="Logo"
                 class="logo1 avo-logo-light"
-                style="height: 25px"
-                src="/vite.svg"
+                style="height: 70px"
+                src="/images/logo.jpg"
               />
             </a>
           </div>
@@ -36,13 +36,10 @@
                 </li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
                   <a href="/services-solutions">
-                    Services & Solutions
+                    Services
                     <span class="dropdown-arrow">▼</span>
                   </a>
                   <ul class="sub-menu">
-                    <li class="menu-item">
-                      <a href="/cold-chain-logistics">Cold Chain Logistics</a>
-                    </li>
                     <li class="menu-item">
                       <a href="/air-freight">Air Freight</a>
                     </li>
@@ -50,7 +47,7 @@
                       <a href="/sea-freight">Sea Freight</a>
                     </li>
                     <li class="menu-item">
-                      <a href="/haulage">Haulage & Transport</a>
+                      <a href="/land-freight">Land Freight</a>
                     </li>
                     <li class="menu-item">
                       <a href="/custom-clearance">Customs Clearance</a>
@@ -58,25 +55,13 @@
                     <li class="menu-item">
                       <a href="/warehouse">Warehouse</a>
                     </li>
-                    <li class="menu-item">
-                      <a href="/project-cargo-handling">Project Cargo Handling</a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="/supply-chain-financing">Supply Chain Financing</a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="/break-bulk">Break Bulk</a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="/cargo-insurance">Cargo Insurance</a>
-                    </li>
                   </ul>
                 </li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="/insights">Insights</a>
+                  <a href="/careers">Careers</a>
                 </li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="/careers">Careers</a>
+                  <a href="/contact">Contact</a>
                 </li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
                   <a href="/support">Support</a>
@@ -116,11 +101,6 @@
               </div>
             </div>
           </div>
-          
-          <!-- Get Quote Button -->
-          <div class="btn-nav-top hidden-xs hidden-sm">
-            <a href="/support">Get a Quote</a>
-          </div>
 
           <div class="mobile-wrapper hidden-lg">
             <a href="#" class="hamburger" @click.prevent="toggleMobileMenu">
@@ -128,7 +108,7 @@
             </a>
             <div class="fat-nav" :class="{ active: isMobileMenuOpen }">
               <a href="/">
-                <img src="/vite.svg" alt="Logo" />
+                <img src="/images/logo.jpg" alt="Logo" />
               </a>
               <div class="fat-nav__wrapper">
                 <form role="search" method="get" id="search-form-2" class="searchform" @submit.prevent="handleSearch">
@@ -152,13 +132,10 @@
                     </li>
                     <li class="menu-item menu-item-has-children">
                       <a href="/services-solutions" @click.prevent="toggleMobileSubmenu">
-                        Services & Solutions
+                        Services
                         <span class="mobile-arrow">▼</span>
                       </a>
                       <ul class="sub-menu" :class="{ active: isMobileSubmenuOpen }">
-                        <li class="menu-item">
-                          <a href="/cold-chain-logistics">Cold Chain Logistics</a>
-                        </li>
                         <li class="menu-item">
                           <a href="/air-freight">Air Freight</a>
                         </li>
@@ -166,25 +143,13 @@
                           <a href="/sea-freight">Sea Freight</a>
                         </li>
                         <li class="menu-item">
-                          <a href="/haulage">Haulage & Transport</a>
+                          <a href="/land-freight">Land Freight</a>
                         </li>
                         <li class="menu-item">
                           <a href="/custom-clearance">Customs Clearance</a>
                         </li>
                         <li class="menu-item">
                           <a href="/warehouse">Warehouse</a>
-                        </li>
-                        <li class="menu-item">
-                          <a href="/project-cargo-handling">Project Cargo Handling</a>
-                        </li>
-                        <li class="menu-item">
-                          <a href="/supply-chain-financing">Supply Chain Financing</a>
-                        </li>
-                        <li class="menu-item">
-                          <a href="/break-bulk">Break Bulk</a>
-                        </li>
-                        <li class="menu-item">
-                          <a href="/cargo-insurance">Cargo Insurance</a>
                         </li>
                       </ul>
                     </li>
@@ -199,7 +164,6 @@
                     </li>
                   </ul>
                 </div>
-                <a href="/support#support-contact">Get a Quote</a>
               </div>
             </div>
           </div>
@@ -278,7 +242,7 @@ const handleSearch = () => {
   max-width: 100%;
   width: 100%;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 10%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -615,7 +579,7 @@ const handleSearch = () => {
 }
 
 .fat-nav > a img {
-  height: 30px;
+  height: 35px;
   width: auto;
 }
 
@@ -754,14 +718,17 @@ const handleSearch = () => {
     display: block;
   }
 
-  .header-wrapper {
+  /* Ẩn menu desktop & search khi ở breakpoint mobile/tablet */
+  .main-menu,
+  .search-icon-header,
+  .header-top {
     display: none;
   }
 
   .container-fluid {
     justify-content: space-between;
   }
-  
+
   .btn-nav-top {
     display: none;
   }
