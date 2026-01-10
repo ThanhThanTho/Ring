@@ -1,14 +1,13 @@
 <script setup>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
-import Home from './components/Home.vue'
 </script>
 
 <template>
   <div id="app">
     <Header />
     <main>
-      <Home />
+      <router-view />
     </main>
     <Footer />
   </div>

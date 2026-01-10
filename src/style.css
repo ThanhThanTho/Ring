@@ -44,6 +44,16 @@ a {
   font-family: 'Poppins', sans-serif;
 }
 
+/* Vue Router Link styling */
+a.router-link-active,
+a.router-link-exact-active {
+  color: inherit;
+}
+
+a.router-link-active.router-link-exact-active {
+  color: inherit;
+}
+
 button {
   font-family: 'Poppins', sans-serif;
   cursor: pointer;

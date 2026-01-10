@@ -35,9 +35,9 @@
                   needs.
                 </p>
                 <div class="btn-relative">
-                  <a href="/support">
+                  <router-link to="/support">
                     Get Started
-                  </a>
+                  </router-link>
                 </div>
               </div>
             </div>

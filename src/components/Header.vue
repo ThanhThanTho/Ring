@@ -10,7 +10,7 @@
         <div class="container-fluid">
           <!-- Logo -->
           <div class="top-logo">
-            <a href="/">
+            <router-link to="/">
               <img
                 alt="Logo"
                 class="logo1 avo-logo-dark"
@@ -23,7 +23,7 @@
                 style="height: 70px"
                 src="/images/logo.jpg"
               />
-            </a>
+            </router-link>
           </div>
           <!--End Logo-->
 
@@ -32,39 +32,39 @@
             <div class="menu-menu-2-container">
               <ul id="menu-menu-2" class="home-nav navigation menu">
                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="/about-us">About Us</a>
+                  <router-link to="/about-us">About Us</router-link>
                 </li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
-                  <a href="/services-solutions">
+                  <a href="#" @click.prevent>
                     Services
                     <span class="dropdown-arrow">▼</span>
                   </a>
                   <ul class="sub-menu">
                     <li class="menu-item">
-                      <a href="/air-freight">Air Freight</a>
+                      <router-link to="/services/air-freight">Air Freight</router-link>
                     </li>
                     <li class="menu-item">
-                      <a href="/sea-freight">Sea Freight</a>
+                      <router-link to="/services/sea-freight">Sea Freight</router-link>
                     </li>
                     <li class="menu-item">
-                      <a href="/land-freight">Land Freight</a>
+                      <router-link to="/services/land-freight">Land Freight</router-link>
                     </li>
                     <li class="menu-item">
-                      <a href="/custom-clearance">Customs Clearance</a>
+                      <router-link to="/services/custom-clearance">Customs Clearance</router-link>
                     </li>
                     <li class="menu-item">
-                      <a href="/warehouse">Warehouse</a>
+                      <router-link to="/services/warehouse">Warehouse</router-link>
                     </li>
                   </ul>
                 </li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="/careers">Careers</a>
+                  <router-link to="/careers">Careers</router-link>
                 </li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="/contact">Contact</a>
+                  <router-link to="/contact">Contact</router-link>
                 </li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="/support">Support</a>
+                  <router-link to="/support">Support</router-link>
                 </li>
               </ul>
             </div>
@@ -107,9 +107,9 @@
               <div class="hamburger__icon" :class="{ active: isMobileMenuOpen }"></div>
             </a>
             <div class="fat-nav" :class="{ active: isMobileMenuOpen }">
-              <a href="/">
+              <router-link to="/">
                 <img src="/images/logo.jpg" alt="Logo" />
-              </a>
+              </router-link>
               <div class="fat-nav__wrapper">
                 <form role="search" method="get" id="search-form-2" class="searchform" @submit.prevent="handleSearch">
                   <input
@@ -128,39 +128,39 @@
                 <div class="fat-list">
                   <ul id="menu-menu-3" class="mob-nav menu">
                     <li class="menu-item">
-                      <a href="/about-us">About Us</a>
+                      <router-link to="/about-us">About Us</router-link>
                     </li>
                     <li class="menu-item menu-item-has-children">
-                      <a href="/services-solutions" @click.prevent="toggleMobileSubmenu">
+                      <a href="#" @click.prevent="toggleMobileSubmenu">
                         Services
                         <span class="mobile-arrow">▼</span>
                       </a>
                       <ul class="sub-menu" :class="{ active: isMobileSubmenuOpen }">
                         <li class="menu-item">
-                          <a href="/air-freight">Air Freight</a>
+                          <router-link to="/services/air-freight">Air Freight</router-link>
                         </li>
                         <li class="menu-item">
-                          <a href="/sea-freight">Sea Freight</a>
+                          <router-link to="/services/sea-freight">Sea Freight</router-link>
                         </li>
                         <li class="menu-item">
-                          <a href="/land-freight">Land Freight</a>
+                          <router-link to="/services/land-freight">Land Freight</router-link>
                         </li>
                         <li class="menu-item">
-                          <a href="/custom-clearance">Customs Clearance</a>
+                          <router-link to="/services/custom-clearance">Customs Clearance</router-link>
                         </li>
                         <li class="menu-item">
-                          <a href="/warehouse">Warehouse</a>
+                          <router-link to="/services/warehouse">Warehouse</router-link>
                         </li>
                       </ul>
                     </li>
                     <li class="menu-item">
-                      <a href="/insights">Insights</a>
+                      <router-link to="/insights">Insights</router-link>
                     </li>
                     <li class="menu-item">
-                      <a href="/careers">Careers</a>
+                      <router-link to="/careers">Careers</router-link>
                     </li>
                     <li class="menu-item">
-                      <a href="/support">Support</a>
+                      <router-link to="/support">Support</router-link>
                     </li>
                   </ul>
                 </div>
@@ -180,7 +180,9 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 const isSearchOpen = ref(false)
 const isMobileMenuOpen = ref(false)
 const isMobileSubmenuOpen = ref(false)
@@ -262,7 +264,8 @@ const handleSearch = () => {
   height: 20px;
 }
 
-.top-logo a {
+.top-logo a,
+.top-logo router-link {
   display: block;
 }
 
@@ -299,7 +302,9 @@ const handleSearch = () => {
   position: relative;
 }
 
-.navigation.menu > .menu-item > a {
+.navigation.menu > .menu-item > a,
+.navigation.menu > .menu-item > router-link,
+.navigation.menu > .menu-item router-link {
   color: #333;
   text-decoration: none;
   font-size: 16px;
@@ -310,7 +315,9 @@ const handleSearch = () => {
   white-space: nowrap;
 }
 
-.navigation.menu > .menu-item > a:hover {
+.navigation.menu > .menu-item > a:hover,
+.navigation.menu > .menu-item > router-link:hover,
+.navigation.menu > .menu-item router-link:hover {
   color: #FF9900;
 }
 
@@ -356,7 +363,8 @@ const handleSearch = () => {
   border-bottom: none;
 }
 
-.sub-menu .menu-item a {
+.sub-menu .menu-item a,
+.sub-menu .menu-item router-link {
   color: #333;
   text-decoration: none;
   padding: 12px 20px;
@@ -365,7 +373,8 @@ const handleSearch = () => {
   transition: background 0.3s, color 0.3s;
 }
 
-.sub-menu .menu-item a:hover {
+.sub-menu .menu-item a:hover,
+.sub-menu .menu-item router-link:hover {
   background: #f8f9fa;
   color: #FF9900;
 }
@@ -572,7 +581,8 @@ const handleSearch = () => {
   right: 0;
 }
 
-.fat-nav > a {
+.fat-nav > a,
+.fat-nav > router-link {
   display: block;
   padding: 20px;
   border-bottom: 1px solid #f0f0f0;
@@ -642,7 +652,8 @@ const handleSearch = () => {
   border-bottom: 1px solid #f0f0f0;
 }
 
-.mob-nav .menu-item a {
+.mob-nav .menu-item a,
+.mob-nav .menu-item router-link {
   color: #333;
   text-decoration: none;
   padding: 15px 0;
@@ -679,7 +690,8 @@ const handleSearch = () => {
   padding: 10px 0;
 }
 
-.mob-nav .sub-menu .menu-item a {
+.mob-nav .sub-menu .menu-item a,
+.mob-nav .sub-menu .menu-item router-link {
   padding-left: 20px;
   font-size: 14px;
 }

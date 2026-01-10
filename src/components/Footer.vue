@@ -3,10 +3,10 @@
     <div class="footer-container">
       <div class="footer-content">
         <!-- Logo -->
-        <a href="/" class="footer-logo-link">
+        <router-link to="/" class="footer-logo-link">
           <!-- Dùng tạm logo hiện có trong project -->
           <img src="/images/logo.jpg" alt="logo footer" loading="lazy" class="footer-logo-img" />
-        </a>
+        </router-link>
 
         <!-- Grid Layout: 4 Columns -->
         <div class="footer-grid">
@@ -40,50 +40,35 @@
 
           <!-- Column 2: Services -->
           <div class="footer-col footer-col-2">
-            <div class="footer-section-header" @click="toggleSection(1)">
+            <div class="footer-section-header">
               <div class="footer-section-title">Services</div>
-              <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" 
-                   class="footer-accordion-icon" :class="{ 'active': activeSection === 1 }">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4784 0.823707C13.1012 0.49366 12.4896 0.49366 12.1124 0.823707L7.00026 5.29688L1.88808 0.823707C1.51089 0.49366 0.899344 0.49366 0.522148 0.823707C0.144961 1.15374 0.144961 1.68885 0.522148 2.01889L6.3173 7.08964C6.69447 7.41966 7.30605 7.41966 7.68321 7.08964L13.4784 2.01889C13.8555 1.68885 13.8555 1.15374 13.4784 0.823707Z" fill="white"></path>
-              </svg>
             </div>
-            <hr class="footer-divider" />
-            <ul class="footer-links" :class="{ 'active': activeSection === 1 }">
-              <li><a href="/sea-freight" class="footer-link">Sea Freight</a></li>
-              <li><a href="/air-freight" class="footer-link">Air Freight</a></li>
-              <li><a href="/land-freight" class="footer-link">Land Freight</a></li>
-              <li><a href="/custom-clearance" class="footer-link">Custom Clearance</a></li>
-              <li><a href="/warehouse" class="footer-link">Warehouse</a></li>
+            <ul class="footer-links">
+              <li><router-link to="/services/sea-freight" class="footer-link" active-class="">Sea Freight</router-link></li>
+              <li><router-link to="/services/air-freight" class="footer-link" active-class="">Air Freight</router-link></li>
+              <li><router-link to="/services/land-freight" class="footer-link" active-class="">Land Freight</router-link></li>
+              <li><router-link to="/services/custom-clearance" class="footer-link" active-class="">Custom Clearance</router-link></li>
+              <li><router-link to="/services/warehouse" class="footer-link" active-class="">Warehouse</router-link></li>
             </ul>
           </div>
 
           <!-- Column 3: Beacon -->
           <div class="footer-col footer-col-3">
-            <div class="footer-section-header" @click="toggleSection(2)">
+            <div class="footer-section-header">
               <div class="footer-section-title">Beacon</div>
-              <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" 
-                   class="footer-accordion-icon" :class="{ 'active': activeSection === 2 }">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4784 0.823707C13.1012 0.49366 12.4896 0.49366 12.1124 0.823707L7.00026 5.29688L1.88808 0.823707C1.51089 0.49366 0.899344 0.49366 0.522148 0.823707C0.144961 1.15374 0.144961 1.68885 0.522148 2.01889L6.3173 7.08964C6.69447 7.41966 7.30605 7.41966 7.68321 7.08964L13.4784 2.01889C13.8555 1.68885 13.8555 1.15374 13.4784 0.823707Z" fill="white"></path>
-              </svg>
             </div>
-            <hr class="footer-divider" />
-            <ul class="footer-links" :class="{ 'active': activeSection === 2 }">
-              <li><a href="/about-us" class="footer-link">About Us</a></li>
-              <li><a href="/careers" class="footer-link">Career</a></li>
+            <ul class="footer-links">
+              <li><router-link to="/about-us" class="footer-link" active-class="">About Us</router-link></li>
+              <li><router-link to="/careers" class="footer-link" active-class="">Career</router-link></li>
             </ul>
           </div>
 
           <!-- Column 4: Hỗ trợ -->
           <div class="footer-col footer-col-4">
-            <div class="footer-section-header" @click="toggleSection(3)">
-              <div class="footer-section-title">Hỗ trợ</div>
-              <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" 
-                   class="footer-accordion-icon" :class="{ 'active': activeSection === 3 }">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4784 0.823707C13.1012 0.49366 12.4896 0.49366 12.1124 0.823707L7.00026 5.29688L1.88808 0.823707C1.51089 0.49366 0.899344 0.49366 0.522148 0.823707C0.144961 1.15374 0.144961 1.68885 0.522148 2.01889L6.3173 7.08964C6.69447 7.41966 7.30605 7.41966 7.68321 7.08964L13.4784 2.01889C13.8555 1.68885 13.8555 1.15374 13.4784 0.823707Z" fill="white"></path>
-              </svg>
+            <div class="footer-section-header">
+              <div class="footer-section-title">Support</div>
             </div>
-            <hr class="footer-divider" />
-            <ul class="footer-links" :class="{ 'active': activeSection === 3 }">
+            <ul class="footer-links">
               <!-- No items -->
             </ul>
           </div>
@@ -92,7 +77,7 @@
         <!-- Social Media Icons -->
         <ul class="footer-social-list">
           <li>
-            <a href="https://www.facebook.com/reallogisticsvietnam" target="_blank" rel="noopener noreferrer nofollow" 
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer nofollow" 
                class="footer-social-icon" aria-label="Facebook">
               <div class="footer-social-bg"></div>
               <svg width="11" height="21" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="footer-social-svg">
@@ -101,7 +86,7 @@
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/company/reallogistics" target="_blank" rel="noopener noreferrer nofollow" 
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer nofollow" 
                class="footer-social-icon" aria-label="Linked In">
               <div class="footer-social-bg"></div>
               <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="footer-social-svg">
@@ -110,7 +95,7 @@
             </a>
           </li>
           <li>
-            <a href="https://zalo.me/1772252251322542274" target="_blank" rel="noopener noreferrer nofollow" 
+            <a href="https://zalo.me" target="_blank" rel="noopener noreferrer nofollow" 
                class="footer-social-icon" aria-label="Zalo">
               <div class="footer-social-bg"></div>
               <svg width="28" height="10" viewBox="0 0 28 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="footer-social-svg">
@@ -136,17 +121,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
-const activeSection = ref(null)
-
-const toggleSection = (section) => {
-  if (activeSection.value === section) {
-    activeSection.value = null
-  } else {
-    activeSection.value = section
-  }
-}
 </script>
 
 <style scoped>
@@ -156,7 +130,7 @@ const toggleSection = (section) => {
   background-position: center;
   background-repeat: no-repeat;
   background-color: #E5E9E7;
-  color: #333;
+  color: #FF9900 ;
   width: 100%;
   position: relative;
   padding: 40px 0 0;
@@ -237,7 +211,6 @@ const toggleSection = (section) => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
   padding: 0 0 10px 0;
 }
 
@@ -248,23 +221,6 @@ const toggleSection = (section) => {
   color: #fff;
 }
 
-.footer-accordion-icon {
-  width: 14px;
-  height: 8px;
-  transition: transform 0.3s ease-in-out;
-  display: none;
-}
-
-.footer-accordion-icon.active {
-  transform: rotate(180deg);
-}
-
-.footer-divider {
-  border: none;
-  border-top: 1px solid #fff;
-  margin: 12px 0;
-  display: none;
-}
 
 .footer-links {
   list-style: none;
@@ -289,6 +245,16 @@ const toggleSection = (section) => {
 }
 
 .footer-link:hover {
+  color: #FF9900;
+}
+
+.footer-link.router-link-active,
+.footer-link.router-link-exact-active {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-link.router-link-active:hover,
+.footer-link.router-link-exact-active:hover {
   color: #FF9900;
 }
 
@@ -413,28 +379,7 @@ const toggleSection = (section) => {
     padding: 0 6px;
   }
 
-  .footer-accordion-icon {
-    display: block;
-  }
-
-  .footer-divider {
-    display: block;
-    margin-top: 12px;
-  }
-
   .footer-links {
-    max-height: 0;
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
-    transition: max-height 0.7s ease-in-out, opacity 0.7s ease-in-out, visibility 0.7s ease-in-out;
-    padding: 0;
-  }
-
-  .footer-links.active {
-    max-height: 1000px;
-    opacity: 1;
-    visibility: visible;
     padding: 12px 0;
   }
 
