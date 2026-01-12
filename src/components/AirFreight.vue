@@ -481,7 +481,38 @@ onUnmounted(() => {
   position: relative;
   width: 100%;
   overflow: hidden;
-  height: 250px;
+  height: 550px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section > .relative {
+  width: 100%;
+}
+
+.hero-section .container {
+  max-width: 100%;
+  padding: 0 10%;
+}
+
+.hero-section .display-1 {
+  font-family: 'Poppins';
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 70px;
+  margin: 0 0 10px 0;
+  text-align: left;
+  color: #fff;
+}
+
+.hero-section .description {
+  font-family: 'Poppins';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #fff;
+  max-width: 720px;
+  text-align: left;
 }
 
 .absolute {
@@ -524,10 +555,15 @@ onUnmounted(() => {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
+}
+
+.breadcrumb-section .container {
+  max-width: 100%;
+  padding: 0 10%;
 }
 
 .text-white {
@@ -765,7 +801,7 @@ onUnmounted(() => {
   }
   
   .hero-section {
-    height: 452px;
+    height: 550px;
   }
 
   .overview-section {

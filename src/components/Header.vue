@@ -257,21 +257,21 @@ const handleSearch = () => {
 /* Logo */
 .top-logo {
   flex-shrink: 0;
-  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  height: 75px;
 }
 
 .top-logo img {
-  height: 20px;
+  height: 70px;
+  width: auto;
 }
 
 .top-logo a,
 .top-logo router-link {
-  display: block;
-}
-
-.top-logo img {
-  height: 25px;
-  width: auto;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .avo-logo-light {

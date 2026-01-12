@@ -481,7 +481,13 @@ onUnmounted(() => {
   position: relative;
   width: 100%;
   overflow: hidden;
-  height: 250px;
+  height: 550px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section > .relative {
+  width: 100%;
 }
 
 .absolute {
@@ -524,38 +530,45 @@ onUnmounted(() => {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
+}
+
+.hero-section .container {
+  max-width: 100%;
+  padding: 0 10%;
+}
+
+.breadcrumb-section .container {
+  max-width: 100%;
+  padding: 0 10%;
 }
 
 .text-white {
   color: #ffffff;
 }
 
-.display-1 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 48px;
+/* Hero content typography (match Home slider) */
+.hero-section .display-1 {
+  font-family: 'Poppins';
+  font-size: 50px;
   font-weight: 700;
-  line-height: 1.2;
-  margin: 0;
+  line-height: 70px;
+  margin: 0 0 10px 0;
+  text-align: left;
+  color: #fff;
 }
 
-.title-3 {
-  font-family: 'Poppins', sans-serif;
+.hero-section .description {
+  font-family: 'Poppins';
   font-size: 18px;
   font-weight: 400;
-  line-height: 1.6;
-}
-
-.mt-4 {
-  margin-top: 16px;
-}
-
-.description {
-  width: 100%;
-  max-width: 600px;
+  line-height: 25px;
+  color: #fff;
+  max-width: 720px;
+  text-align: left;
 }
 
 /* Overview Section */
@@ -765,7 +778,7 @@ onUnmounted(() => {
   }
   
   .hero-section {
-    height: 452px;
+    height: 550px;
   }
 
   .overview-section {
