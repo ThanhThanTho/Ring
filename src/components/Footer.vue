@@ -3,7 +3,7 @@
     <div class="footer-container">
       <div class="footer-content">
         <!-- Logo -->
-        <router-link to="/" class="footer-logo-link">
+        <router-link to="/" class="footer-logo-link" @click="scrollToTop">
           <!-- Dùng tạm logo hiện có trong project -->
           <img src="/images/logo.jpg" alt="logo footer" loading="lazy" class="footer-logo-img" />
         </router-link>
@@ -44,11 +44,11 @@
               <div class="footer-section-title">Services</div>
             </div>
             <ul class="footer-links">
-              <li><router-link to="/services/sea-freight" class="footer-link" active-class="">Sea Freight</router-link></li>
-              <li><router-link to="/services/air-freight" class="footer-link" active-class="">Air Freight</router-link></li>
-              <li><router-link to="/services/land-freight" class="footer-link" active-class="">Land Freight</router-link></li>
-              <li><router-link to="/services/custom-clearance" class="footer-link" active-class="">Custom Clearance</router-link></li>
-              <li><router-link to="/services/warehouse" class="footer-link" active-class="">Warehouse</router-link></li>
+              <li><router-link to="/services/sea-freight" class="footer-link" active-class="" @click="scrollToTop">Sea Freight</router-link></li>
+              <li><router-link to="/services/air-freight" class="footer-link" active-class="" @click="scrollToTop">Air Freight</router-link></li>
+              <li><router-link to="/services/land-freight" class="footer-link" active-class="" @click="scrollToTop">Land Freight</router-link></li>
+              <li><router-link to="/services/custom-clearance" class="footer-link" active-class="" @click="scrollToTop">Custom Clearance</router-link></li>
+              <li><router-link to="/services/warehouse" class="footer-link" active-class="" @click="scrollToTop">Warehouse</router-link></li>
             </ul>
           </div>
 
@@ -58,8 +58,8 @@
               <div class="footer-section-title">Beacon</div>
             </div>
             <ul class="footer-links">
-              <li><router-link to="/about-us" class="footer-link" active-class="">About Us</router-link></li>
-              <li><router-link to="/careers" class="footer-link" active-class="">Career</router-link></li>
+              <li><router-link to="/about-us" class="footer-link" active-class="" @click="scrollToTop">About Us</router-link></li>
+              <li><router-link to="/careers" class="footer-link" active-class="" @click="scrollToTop">Career</router-link></li>
             </ul>
           </div>
 
@@ -121,6 +121,9 @@
 </template>
 
 <script setup>
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
 </script>
 
 <style scoped>

@@ -10,7 +10,7 @@
         <div class="container-fluid">
           <!-- Logo -->
           <div class="top-logo">
-            <router-link to="/">
+            <router-link to="/" @click="scrollToTop">
               <img
                 alt="Logo"
                 class="logo1 avo-logo-dark"
@@ -32,7 +32,7 @@
             <div class="menu-menu-2-container">
               <ul id="menu-menu-2" class="home-nav navigation menu">
                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                  <router-link to="/about-us">About Us</router-link>
+                  <router-link to="/about-us" @click="scrollToTop">About Us</router-link>
                 </li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
                   <a href="#" @click.prevent>
@@ -41,30 +41,30 @@
                   </a>
                   <ul class="sub-menu">
                     <li class="menu-item">
-                      <router-link to="/services/air-freight">Air Freight</router-link>
+                      <router-link to="/services/air-freight" @click="scrollToTop">Air Freight</router-link>
                     </li>
                     <li class="menu-item">
-                      <router-link to="/services/sea-freight">Sea Freight</router-link>
+                      <router-link to="/services/sea-freight" @click="scrollToTop">Sea Freight</router-link>
                     </li>
                     <li class="menu-item">
-                      <router-link to="/services/land-freight">Land Freight</router-link>
+                      <router-link to="/services/land-freight" @click="scrollToTop">Land Freight</router-link>
                     </li>
                     <li class="menu-item">
-                      <router-link to="/services/custom-clearance">Customs Clearance</router-link>
+                      <router-link to="/services/custom-clearance" @click="scrollToTop">Customs Clearance</router-link>
                     </li>
                     <li class="menu-item">
-                      <router-link to="/services/warehouse">Warehouse</router-link>
+                      <router-link to="/services/warehouse" @click="scrollToTop">Warehouse</router-link>
                     </li>
                   </ul>
                 </li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                  <router-link to="/careers">Careers</router-link>
+                  <router-link to="/careers" @click="scrollToTop">Careers</router-link>
                 </li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                  <router-link to="/contact">Contact</router-link>
+                  <router-link to="/contact" @click="scrollToTop">Contact</router-link>
                 </li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                  <router-link to="/support">Support</router-link>
+                  <router-link to="/support" @click="scrollToTop">Support</router-link>
                 </li>
               </ul>
             </div>
@@ -107,7 +107,7 @@
               <div class="hamburger__icon" :class="{ active: isMobileMenuOpen }"></div>
             </a>
             <div class="fat-nav" :class="{ active: isMobileMenuOpen }">
-              <router-link to="/">
+              <router-link to="/" @click="closeMobileMenu">
                 <img src="/images/logo.jpg" alt="Logo" />
               </router-link>
               <div class="fat-nav__wrapper">
@@ -128,7 +128,7 @@
                 <div class="fat-list">
                   <ul id="menu-menu-3" class="mob-nav menu">
                     <li class="menu-item">
-                      <router-link to="/about-us">About Us</router-link>
+                      <router-link to="/about-us" @click="closeMobileMenu">About Us</router-link>
                     </li>
                     <li class="menu-item menu-item-has-children">
                       <a href="#" @click.prevent="toggleMobileSubmenu">
@@ -137,30 +137,30 @@
                       </a>
                       <ul class="sub-menu" :class="{ active: isMobileSubmenuOpen }">
                         <li class="menu-item">
-                          <router-link to="/services/air-freight">Air Freight</router-link>
+                          <router-link to="/services/air-freight" @click="closeMobileMenu">Air Freight</router-link>
                         </li>
                         <li class="menu-item">
-                          <router-link to="/services/sea-freight">Sea Freight</router-link>
+                          <router-link to="/services/sea-freight" @click="closeMobileMenu">Sea Freight</router-link>
                         </li>
                         <li class="menu-item">
-                          <router-link to="/services/land-freight">Land Freight</router-link>
+                          <router-link to="/services/land-freight" @click="closeMobileMenu">Land Freight</router-link>
                         </li>
                         <li class="menu-item">
-                          <router-link to="/services/custom-clearance">Customs Clearance</router-link>
+                          <router-link to="/services/custom-clearance" @click="closeMobileMenu">Customs Clearance</router-link>
                         </li>
                         <li class="menu-item">
-                          <router-link to="/services/warehouse">Warehouse</router-link>
+                          <router-link to="/services/warehouse" @click="closeMobileMenu">Warehouse</router-link>
                         </li>
                       </ul>
                     </li>
                     <li class="menu-item">
-                      <router-link to="/insights">Insights</router-link>
+                      <router-link to="/insights" @click="closeMobileMenu">Insights</router-link>
                     </li>
                     <li class="menu-item">
-                      <router-link to="/careers">Careers</router-link>
+                      <router-link to="/careers" @click="closeMobileMenu">Careers</router-link>
                     </li>
                     <li class="menu-item">
-                      <router-link to="/support">Support</router-link>
+                      <router-link to="/support" @click="closeMobileMenu">Support</router-link>
                     </li>
                   </ul>
                 </div>
@@ -201,8 +201,20 @@ const toggleMobileMenu = () => {
   }
 }
 
+const closeMobileMenu = () => {
+  isMobileMenuOpen.value = false
+  isMobileSubmenuOpen.value = false
+  document.body.style.overflow = ''
+  // Scroll về đầu trang
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
 const toggleMobileSubmenu = () => {
   isMobileSubmenuOpen.value = !isMobileSubmenuOpen.value
+}
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 const handleSearch = () => {

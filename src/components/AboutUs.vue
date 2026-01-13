@@ -272,13 +272,11 @@
 /* Section 5: Vision / Mission / Values */
 .about-vmv-section {
   width: 100%;
-  padding: 60px 0;
 }
 
 .vmv-row {
   width: 100%;
   max-width: 100%;
-  margin: 0 0 40px 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -433,11 +431,6 @@
     text-align: left;
   }
 
-  /* Vision / Mission / Values Section */
-  .about-vmv-section {
-    padding: 40px 0;
-  }
-
   .vmv-row {
     margin-bottom: 0;
   }
@@ -507,11 +500,6 @@
     width: 100%;
     padding-top: 16px;
     text-align: left;
-  }
-
-  /* Vision / Mission / Values Section */
-  .about-vmv-section {
-    padding: 30px 0;
   }
 
   .vmv-row {

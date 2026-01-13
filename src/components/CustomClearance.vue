@@ -929,7 +929,7 @@ onUnmounted(() => {
 
 @media (max-width: 767px) {
   .hero-section {
-    height: 250px;
+    height: 410px;
   }
   
   .description {
@@ -938,7 +938,8 @@ onUnmounted(() => {
   
   .display-1 {
     white-space: pre-line;
-    font-size: 32px;
+    font-size: 28px;
+    line-height: 40px;
   }
   
   .title-3 {

@@ -1389,16 +1389,11 @@ onUnmounted(() => {
   background: #e68900 !important;
 }
 
-/* Responsive */
-@media (min-width: 601px) and (max-width: 1005px) {
-  .home-page-section-1 .slider-box {
-    margin-left: 40px !important;
-  }
-}
-
+/* Responsive - Tablet */
 @media (min-width: 601px) and (max-width: 1005px) {
   .home-page-section-1 .slider-box {
     padding: 120px 40px 40px;
+    margin-left: 40px !important;
   }
 
   /* Tablet: Section 4 - mỗi service 1 hàng */
@@ -1457,13 +1452,28 @@ onUnmounted(() => {
   }
 }
 
+/* Responsive - Mobile */
 @media only screen and (max-width: 600px) {
   .home-page-section-1 {
     min-height: 450px;
   }
 
+  .hero-slider {
+    height: 450px;
+  }
+
   .home-page-section-1 .slider-box {
     padding: 100px 20px 40px !important;
+  }
+
+  .hero-heading-prefix {
+    font-size: 30px !important;
+    line-height: 50px !important;
+  }
+
+  .hero-heading-main {
+    font-size: 34px !important;
+    line-height: 50px !important;
   }
 
   .home-page-section-1 .slider-subtitle,
