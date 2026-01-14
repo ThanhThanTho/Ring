@@ -201,36 +201,11 @@
             <!-- Map image -->
             <div class="markets-map-image">
               <img 
-                src="https://reallogistics.vn/_ipx/f_webp/images/home/home-market-desktop.webp" 
+                src="/images/map.jpg" 
                 alt="markets map" 
                 loading="lazy"
                 class="map-img"
               />
-            </div>
-            
-            <!-- SVG lines overlay -->
-            <div class="markets-map-lines">
-              <svg width="269" height="145" viewBox="0 0 269 145" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M268 144.332C256 126.832 106 -16.168 0.5 2.832" stroke="#EE921D" stroke-width="2" stroke-dasharray="3 3"></path>
-              </svg>
-              <svg width="264" height="34" viewBox="0 0 264 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M263 7.33301C247 -4.66707 52 2.83317 0.5 32.8332" stroke="#EE921D" stroke-width="2" stroke-dasharray="3 3"></path>
-              </svg>
-              <svg width="23" height="64" viewBox="0 0 23 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22 63.3335C17.5 44.8336 -20.5 -1.66651 18.5 1.83375" stroke="#EE921D" stroke-width="2" stroke-dasharray="3 3"></path>
-              </svg>
-              <svg width="464" height="190" viewBox="0 0 464 190" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 188.833C55.5 24.333 277 -23.1669 463.5 12.3333" stroke="#EE921D" stroke-width="4" stroke-dasharray="8 8"></path>
-              </svg>
-              <svg width="625" height="120" viewBox="0 0 625 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M623.5 118.834C603 84.8341 195 -57.6661 0.5 28.3337" stroke="#EE921D" stroke-width="2" stroke-dasharray="3 3"></path>
-              </svg>
-              <svg width="90" height="120" viewBox="0 0 90 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M85.5003 119.334C99.5002 93.3342 55.9999 3.83398 1 1.83398" stroke="#EE921D" stroke-width="2" stroke-dasharray="3 3"></path>
-              </svg>
-              <svg width="471" height="127" viewBox="0 0 471 127" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.5 124.832C172 -66.3342 353 19.3316 470 39.3321" stroke="#EE921D" stroke-width="4" stroke-dasharray="8 8"></path>
-              </svg>
             </div>
           </div>
         </div>
@@ -1202,74 +1177,7 @@ onUnmounted(() => {
   display: block;
 }
 
-.markets-map-lines {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.markets-map-lines svg {
-  position: absolute;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  z-index: 100;
-  pointer-events: auto;
-}
-
-/* Position các SVG lines - giữ nguyên viewBox, chỉ điều chỉnh vị trí */
-.markets-map-lines svg:nth-child(1) {
-  top: 8%;
-  right: 12%;
-  width: 269px;
-  height: 145px;
-}
-
-.markets-map-lines svg:nth-child(2) {
-  top: 18%;
-  left: 8%;
-  width: 264px;
-  height: 34px;
-}
-
-.markets-map-lines svg:nth-child(3) {
-  top: 28%;
-  right: 3%;
-  width: 23px;
-  height: 64px;
-}
-
-.markets-map-lines svg:nth-child(4) {
-  top: 12%;
-  left: 3%;
-  width: 464px;
-  height: 190px;
-}
-
-.markets-map-lines svg:nth-child(5) {
-  bottom: 22%;
-  right: 8%;
-  width: 625px;
-  height: 120px;
-}
-
-.markets-map-lines svg:nth-child(6) {
-  bottom: 12%;
-  left: 6%;
-  width: 90px;
-  height: 120px;
-}
-
-.markets-map-lines svg:nth-child(7) {
-  bottom: 8%;
-  left: 18%;
-  width: 471px;
-  height: 127px;
-}
+/* SVG overlay đã xoá theo yêu cầu */
 
 /* Section 8: Contact */
 .home-page-section-8 {
@@ -1440,16 +1348,7 @@ onUnmounted(() => {
     font-size: 15px;
   }
 
-  .markets-map-lines svg {
-    display: none;
-  }
-
-  .markets-map-lines svg:nth-child(4),
-  .markets-map-lines svg:nth-child(5),
-  .markets-map-lines svg:nth-child(7) {
-    display: block;
-    width: 200px !important;
-  }
+  /* SVG overlay đã xoá */
 }
 
 /* Responsive - Mobile */
@@ -1581,9 +1480,7 @@ onUnmounted(() => {
     text-align: left;
   }
 
-  .markets-map-lines svg {
-    display: none;
-  }
+  /* SVG overlay đã xoá */
 
   .home-page-section-5 {
     padding: 40px 16px !important;
