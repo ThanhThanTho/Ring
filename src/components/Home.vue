@@ -467,7 +467,7 @@ onUnmounted(() => {
 .home-page-section-1 .slider-box {
   max-width: 100%;
   margin: 0 auto;
-  padding: 150px 80px 50px;
+  padding: 150px 80px 50px 10%;
   height: 100%;
   display: flex;
   align-items: center;
