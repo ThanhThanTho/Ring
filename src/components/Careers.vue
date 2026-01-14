@@ -158,10 +158,11 @@
                     method="POST"
                     class="contact-form"
                     enctype="multipart/form-data"
-                    @submit.prevent="handleContactSubmit"
                   >
                     <input type="hidden" name="_subject" value="Career Application" />
                     <input type="hidden" name="_captcha" value="false" />
+                    <!-- Redirect về trang Home sau khi gửi thành công (URL động theo domain hiện tại) -->
+                    <input type="hidden" name="_next" :value="baseUrl" />
                     <div class="row">
                       <div class="col-sm-6">
                         <p>
@@ -207,7 +208,7 @@
                       </div>
                       <div class="col-sm-12">
                         <p>
-                          <input class="contact-submit" type="submit" :value="isContactSubmitting ? 'Submitting...' : 'Submit'" :disabled="isContactSubmitting">
+                          <input class="contact-submit" type="submit" value="Submit">
                         </p>
                       </div>
                     </div>
@@ -221,19 +222,14 @@
       </div>
     </section>
 
-    <div v-if="showToast" class="toast-container">
-      <div
-        class="toast-message"
-        :class="toastType === 'success' ? 'toast-success' : 'toast-error'"
-      >
-        {{ toastMessage }}
-      </div>
-    </div>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+
+// URL Home động cho FormSubmit (_next)
+const baseUrl = window.location.origin + '/'
 
 // Hero: chỉ 1 ảnh
 const heroImage = ref('/images/home-slider-1.webp')
@@ -266,68 +262,12 @@ const stopHeroTextLoop = () => {
   }
 }
 
-// Contact form state (FormSubmit AJAX, không redirect)
-const isContactSubmitting = ref(false)
-
-// Toast
-const showToast = ref(false)
-const toastMessage = ref('')
-const toastType = ref('success') // 'success' | 'error'
-let toastTimeoutId
-
-const triggerToast = (message, type = 'success') => {
-  toastMessage.value = message
-  toastType.value = type
-  showToast.value = true
-
-  if (toastTimeoutId) {
-    clearTimeout(toastTimeoutId)
-  }
-
-  toastTimeoutId = window.setTimeout(() => {
-    showToast.value = false
-  }, 4000)
-}
-
-const handleContactSubmit = async (event) => {
-  const form = event.target
-  isContactSubmitting.value = true
-
-  try {
-    const formData = new FormData(form)
-
-    const response = await fetch('https://formsubmit.co/ajax/son.nguyen1@rikai.technology', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-      },
-      body: formData,
-    })
-
-    const result = await response.json()
-
-    if (response.ok) {
-      form.reset()
-      triggerToast('Your contact has been submitted successfully.', 'success')
-    } else {
-      triggerToast('There was an error submitting your contact. Please try again.', 'error')
-    }
-  } catch (error) {
-    triggerToast('There was an error submitting your application. Please try again.', 'error')
-  } finally {
-    isContactSubmitting.value = false
-  }
-}
-
 onMounted(() => {
   startHeroTextLoop()
 })
 
 onUnmounted(() => {
   stopHeroTextLoop()
-  if (toastTimeoutId) {
-    clearTimeout(toastTimeoutId)
-  }
 })
 </script>
 
@@ -748,34 +688,6 @@ onUnmounted(() => {
   opacity: 0.6;
   cursor: not-allowed;
 }
-
-.toast-container {
-  position: fixed;
-  top: 90px;
-  right: 30px;
-  z-index: 9999;
-}
-
-.toast-message {
-  min-width: 260px;
-  max-width: 340px;
-  padding: 12px 16px;
-  border-radius: 6px;
-  font-family: 'Poppins';
-  font-size: 14px;
-  color: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-}
-
-.toast-success {
-  background-color: #2e7d32;
-}
-
-.toast-error {
-  background-color: #c62828;
-}
-
-
 
 /* Responsive */
 @media (max-width: 991px) {
