@@ -154,7 +154,7 @@
               <div class="wpb_text_column wpb_content_element">
                 <div class="wpb_wrapper">
                   <form
-                    action="https://formsubmit.co/son.nguyen1@rikai.technology"
+                    action="https://formsubmit.co/Hr26.beacon@gmail.com"
                     method="POST"
                     class="contact-form"
                     enctype="multipart/form-data"

@@ -221,7 +221,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const services = ref([
   { id: 1, title: 'Sea Freight', image: '/images/sea-freight.png' },
   { id: 2, title: 'Air Freight', image: '/images/air-freight.png' },
-  { id: 3, title: 'Land Freight', image: '/images/land-freight.jpg' },
+  { id: 3, title: 'Domestic Transport', image: '/images/land-freight.jpg' },
   { id: 4, title: 'Custom Clearance', image: '/images/customer-clearance.jpg' },
   { id: 5, title: 'Warehouse', image: '/images/warehouse.png' }
 ])

@@ -153,7 +153,7 @@
               <div class="wpb_text_column wpb_content_element">
                 <div class="wpb_wrapper">
                   <form
-                    action="https://formsubmit.co/son.nguyen1@rikai.technology"
+                    action="https://formsubmit.co/Hr26.beacon@gmail.com"
                     method="POST"
                     class="contact-form"
                     enctype="multipart/form-data"
@@ -264,7 +264,7 @@ const handleContactSubmit = async (event) => {
   try {
     const formData = new FormData(form)
 
-    const response = await fetch('https://formsubmit.co/ajax/son.nguyen1@rikai.technology', {
+    const response = await fetch('https://formsubmit.co/ajax/Hr26.beacon@gmail.com', {
       method: 'POST',
       headers: {
         Accept: 'application/json',

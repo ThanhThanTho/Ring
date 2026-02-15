@@ -46,7 +46,7 @@
             <ul class="footer-links">
               <li><router-link to="/services/sea-freight" class="footer-link" active-class="" @click="scrollToTop">Sea Freight</router-link></li>
               <li><router-link to="/services/air-freight" class="footer-link" active-class="" @click="scrollToTop">Air Freight</router-link></li>
-              <li><router-link to="/services/land-freight" class="footer-link" active-class="" @click="scrollToTop">Land Freight</router-link></li>
+              <li><router-link to="/services/land-freight" class="footer-link" active-class="" @click="scrollToTop">Domestic Transport</router-link></li>
               <li><router-link to="/services/custom-clearance" class="footer-link" active-class="" @click="scrollToTop">Custom Clearance</router-link></li>
               <li><router-link to="/services/warehouse" class="footer-link" active-class="" @click="scrollToTop">Warehouse</router-link></li>
             </ul>

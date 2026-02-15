@@ -47,7 +47,7 @@
                       <router-link to="/services/air-freight" @click="scrollToTop">Air Freight</router-link>
                     </li>
                     <li class="menu-item">
-                      <router-link to="/services/land-freight" @click="scrollToTop">Land Freight</router-link>
+                      <router-link to="/services/land-freight" @click="scrollToTop">Domestic Transport</router-link>
                     </li>
                     <li class="menu-item">
                       <router-link to="/services/custom-clearance" @click="scrollToTop">Customs Clearance</router-link>
@@ -143,7 +143,7 @@
                           <router-link to="/services/air-freight" @click="closeMobileMenu">Air Freight</router-link>
                         </li>
                         <li class="menu-item">
-                          <router-link to="/services/land-freight" @click="closeMobileMenu">Land Freight</router-link>
+                          <router-link to="/services/land-freight" @click="closeMobileMenu">Domestic Transport</router-link>
                         </li>
                         <li class="menu-item">
                           <router-link to="/services/custom-clearance" @click="closeMobileMenu">Customs Clearance</router-link>
