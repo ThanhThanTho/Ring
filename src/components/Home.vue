@@ -192,9 +192,9 @@
     <section class="vc_section home-page-section-markets">
       <div class="container">
         <div class="markets-content">
-          <h2 class="markets-heading">Thị trường</h2>
+          <h2 class="markets-heading">Market</h2>
           <p class="markets-description">
-            Real Logistics tự hào làm việc với các công ty lớn trên khắp Châu Á - Thái Bình Dương, Châu Âu, Bắc Mỹ và nhiều nơi khác. Chúng tôi vận chuyển hàng hóa đến hơn 120 quốc gia và hơn 300 địa điểm, giúp kết nối các thị trường toàn cầu và phát triển công ty nhờ vào dịch vụ logistics đáng tin cậy và hiệu quả.
+            Ring Logistics is proud to work with major companies across Asia-Pacific, Europe, North America, and many other regions. We deliver goods to more than 120 countries and over 300 destinations, connecting global markets and driving business growth through reliable and efficient logistics services.
           </p>
           
           <div class="markets-map-container">
