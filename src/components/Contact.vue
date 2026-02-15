@@ -77,7 +77,7 @@
                   <div class="wsite-multicol-col-image">
                     <div class="wsite-image wsite-image-border-none">
                       <a href="/contact">
-                        <img src="/images/support-person-build.png" alt="Picture">
+                        <img src="/images/nv1.jpg" alt="Picture">
                       </a>
                     </div>
                   </div>
@@ -108,7 +108,7 @@
                   <div class="wsite-multicol-col-image">
                     <div class="wsite-image wsite-image-border-none">
                       <a href="/contact">
-                        <img src="/images/support-person-build.png" alt="Picture">
+                        <img src="/images/nv2.jpg" alt="Picture">
                       </a>
                     </div>
                   </div>
