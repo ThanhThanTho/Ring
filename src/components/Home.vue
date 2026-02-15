@@ -121,7 +121,7 @@
         <div class="wsite-section-elements">
           <!-- Associations -->
           <h2 class="wsite-content-title">
-            <a href="#">We proudly represent prestigious logistics associations</a>
+            <a href="#">WE ARE MEMBERS OF</a>
           </h2>
           
           <div class="wsite-multicol">
@@ -144,7 +144,7 @@
 
           <!-- Partners -->
           <h2 class="wsite-content-title">
-            We earned trust from our strategic partners
+            OUR PARTNER
           </h2>
 
           <div class="wsite-spacer-small"></div>
@@ -1030,22 +1030,19 @@ onUnmounted(() => {
 }
 
 .wsite-content-title {
-  font-family: 'Poppins';
+  font-family: "High Tower Text", serif;
   font-size: 36px;
   font-weight: 600;
   text-align: center;
-  color: #000;
+  color: #0170A7;
   margin: 0 0 40px 0;
 }
 
 .wsite-content-title a {
-  color: #000;
+  font-family: "High Tower Text", serif;
+  color: #0170A7;
   text-decoration: none;
   transition: color 0.3s;
-}
-
-.wsite-content-title a:hover {
-  color: #026937;
 }
 
 .wsite-spacer {
