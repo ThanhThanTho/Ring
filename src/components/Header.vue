@@ -41,10 +41,10 @@
                   </a>
                   <ul class="sub-menu">
                     <li class="menu-item">
-                      <router-link to="/services/air-freight" @click="scrollToTop">Air Freight</router-link>
+                      <router-link to="/services/sea-freight" @click="scrollToTop">Sea Freight</router-link>
                     </li>
                     <li class="menu-item">
-                      <router-link to="/services/sea-freight" @click="scrollToTop">Sea Freight</router-link>
+                      <router-link to="/services/air-freight" @click="scrollToTop">Air Freight</router-link>
                     </li>
                     <li class="menu-item">
                       <router-link to="/services/land-freight" @click="scrollToTop">Land Freight</router-link>
@@ -137,10 +137,10 @@
                       </a>
                       <ul class="sub-menu" :class="{ active: isMobileSubmenuOpen }">
                         <li class="menu-item">
-                          <router-link to="/services/air-freight" @click="closeMobileMenu">Air Freight</router-link>
+                          <router-link to="/services/sea-freight" @click="closeMobileMenu">Sea Freight</router-link>
                         </li>
                         <li class="menu-item">
-                          <router-link to="/services/sea-freight" @click="closeMobileMenu">Sea Freight</router-link>
+                          <router-link to="/services/air-freight" @click="closeMobileMenu">Air Freight</router-link>
                         </li>
                         <li class="menu-item">
                           <router-link to="/services/land-freight" @click="closeMobileMenu">Land Freight</router-link>
