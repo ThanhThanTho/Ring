@@ -555,7 +555,7 @@ onUnmounted(() => {
 .careers-section-3 {
   width: 100%;
   padding: 60px 0;
-  background-color: #026937;
+  background-color: #0170A7;
 }
 
 .row-6 {
