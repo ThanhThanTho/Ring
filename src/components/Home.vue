@@ -228,11 +228,11 @@ const services = ref([
 
 // Hero: 5 ảnh slide + chữ thay đổi riêng (chữ nằm lớp trên ảnh)
 const heroImages = ref([
-  '/images/home-slider-1.webp',
+  '/images/home-slider-1.jpg',
   '/images/home-slider-2.jpg',
-  '/images/home-slider-1.webp',
-  '/images/home-slider-2.jpg',
-  '/images/home-slider-1.webp'
+  '/images/home-slider-3.jpg',
+  '/images/home-slider-4.jpg',
+  '/images/home-slider-5.jpg'
 ])
 
 const heroWords = ref([
