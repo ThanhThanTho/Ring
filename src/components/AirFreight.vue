@@ -198,9 +198,9 @@ const visibleCards = ref(1)
 const industries = ref([
   {
     id: 1,
-    title: 'Electronics',
-    path: '/industries/electronics',
-    image: 'https://console.reallogistics.vn/storage/modern-stationary-collection-arrangement@0.25x.png'
+    title: 'Machinery & Equipment',
+    path: '/industries/machinery-equipment',
+    image: 'https://console.reallogistics.vn/storage/Industry/industry-5.jpg'
   },
   {
     id: 2,
@@ -222,10 +222,11 @@ const industries = ref([
   },
   {
     id: 5,
-    title: 'Machinery & Equipment',
-    path: '/industries/machinery-equipment',
-    image: 'https://console.reallogistics.vn/storage/Industry/industry-5.jpg'
+    title: 'Electronics',
+    path: '/industries/electronics',
+    image: 'https://console.reallogistics.vn/storage/modern-stationary-collection-arrangement@0.25x.png'
   },
+  
   {
     id: 6,
     title: 'Furniture & Houseware',

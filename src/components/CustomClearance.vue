@@ -198,9 +198,9 @@ const visibleCards = ref(1)
 const industries = ref([
   {
     id: 1,
-    title: 'Electronics',
-    path: '/industries/electronics',
-    image: 'https://console.reallogistics.vn/storage/modern-stationary-collection-arrangement@0.25x.png'
+    title: 'Machinery & Equipment',
+    path: '/industries/machinery-equipment',
+    image: 'https://console.reallogistics.vn/storage/Industry/industry-5.jpg'
   },
   {
     id: 2,
@@ -222,10 +222,11 @@ const industries = ref([
   },
   {
     id: 5,
-    title: 'Machinery & Equipment',
-    path: '/industries/machinery-equipment',
-    image: 'https://console.reallogistics.vn/storage/Industry/industry-5.jpg'
+    title: 'Electronics',
+    path: '/industries/electronics',
+    image: 'https://console.reallogistics.vn/storage/modern-stationary-collection-arrangement@0.25x.png'
   },
+  
   {
     id: 6,
     title: 'Furniture & Houseware',
@@ -490,6 +491,31 @@ onUnmounted(() => {
   width: 100%;
 }
 
+.hero-section .container {
+  max-width: 100%;
+  padding: 0 10%;
+}
+
+.hero-section .display-1 {
+  font-family: 'Poppins';
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 70px;
+  margin: 0 0 10px 0;
+  text-align: left;
+  color: #fff;
+}
+
+.hero-section .description {
+  font-family: 'Poppins';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #fff;
+  max-width: 720px;
+  text-align: left;
+}
+
 .absolute {
   position: absolute;
 }
@@ -530,15 +556,10 @@ onUnmounted(() => {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
-}
-
-.hero-section .container {
-  max-width: 100%;
-  padding: 0 10%;
 }
 
 .breadcrumb-section .container {
@@ -550,25 +571,28 @@ onUnmounted(() => {
   color: #ffffff;
 }
 
-/* Hero content typography (match Home slider) */
-.hero-section .display-1 {
-  font-family: 'Poppins';
-  font-size: 50px;
+.display-1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
   font-weight: 700;
-  line-height: 70px;
-  margin: 0 0 10px 0;
-  text-align: left;
-  color: #fff;
+  line-height: 1.2;
+  margin: 0;
 }
 
-.hero-section .description {
-  font-family: 'Poppins';
+.title-3 {
+  font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 400;
-  line-height: 25px;
-  color: #fff;
-  max-width: 720px;
-  text-align: left;
+  line-height: 1.6;
+}
+
+.mt-4 {
+  margin-top: 16px;
+}
+
+.description {
+  width: 100%;
+  max-width: 600px;
 }
 
 /* Overview Section */
