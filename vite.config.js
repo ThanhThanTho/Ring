@@ -8,6 +8,7 @@ export default defineConfig({
     host: '0.0.0.0',
     allowedHosts: [
       'marceline-positivistic-jayleen.ngrok-free.dev',
+      '.ngrok-free.dev', // Cho phép mọi subdomain ngrok
     ],
   },
 })

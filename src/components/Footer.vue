@@ -142,16 +142,12 @@ const scrollToTop = () => {
 </script>
 
 <style scoped>
-.avo-custom-footer {
-  background-image: url('/images/Footer.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #E5E9E7;
-  color: #FF9900 ;
-  width: 100%;
-  position: relative;
-  padding: 40px 0 0;
+.avo-custom-footer[data-v-4896eafd] {
+    background: radial-gradient(ellipse 60% 58% at 16% 14%, #ffffff 0%, #ffffff 20%, rgba(0, 77, 115, 0.4) 30%, rgba(0, 61, 96, 0.75) 89%, #003d5c 121%);
+    color: #FF9900;
+    width: 100%;
+    position: relative;
+    padding: 40px 0 0;
 }
 
 .footer-container {
@@ -352,9 +348,14 @@ const scrollToTop = () => {
 /* Responsive */
 @media (max-width: 991px) {
   .avo-custom-footer {
-    background-image: url('/images/Footer_mobile.png');
-    background-size: cover;
-    background-position: center top;
+    background: radial-gradient(
+      ellipse 100% 70% at 15% 22%,
+      #ffffff 0%,
+      #ffffff 20%,
+      rgba(0, 77, 115, 0.4) 50%,
+      rgba(0, 61, 96, 0.75) 75%,
+      #003d5c 100%
+    );
     padding: 30px 0 0;
   }
 
