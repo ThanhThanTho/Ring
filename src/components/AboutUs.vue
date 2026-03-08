@@ -4,7 +4,7 @@
     <section class="hero-section relative">
       <div class="absolute inset-0 w-full h-full">
         <img 
-          src="/images/about-us-header.jpg" 
+          src="/images/aboutusHD.png"
           alt="About Us" 
           class="object-cover w-full h-full" 
           loading="eager"
