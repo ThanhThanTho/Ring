@@ -5,18 +5,18 @@
         <!-- Logo -->
         <router-link to="/" class="footer-logo-link" @click="scrollToTop">
           <!-- Dùng tạm logo hiện có trong project -->
-          <img src="/images/logo.jpg" alt="logo footer" loading="lazy" class="footer-logo-img" />
+          <img src="/images/logo.png" alt="logo footer" loading="lazy" class="footer-logo-img" />
         </router-link>
 
         <!-- Grid Layout: 4 Columns -->
         <div class="footer-grid">
           <!-- Column 1: Company Info -->
           <div class="footer-col footer-col-1">
-            <div class="footer-company-title">Công ty TNHH Tiếp Vận Thực</div>
+            <div class="footer-company-title">Công ty Beacon Global Logistics</div>
             <div class="footer-contact-list">
               <div class="footer-contact-item">
                 <!-- Thay icon path bằng logo tạm để tránh lỗi import, có thể đổi lại khi có file icon -->
-                <img src="/icons/footer-location.webp" alt="icon location" class="footer-icon" />
+                <i class="fas fa-location-dot footer-icon" style="color: #fff;"></i>
                 <span class="footer-contact-text">
                   <a href="https://maps.app.goo.gl/AmbFRs665pVeQs718" target="_blank" rel="noopener noreferrer nofollow" class="footer-link">
                     39 - 41, Đường B4, Phường An Khánh, TP. Hồ Chí Minh, Việt Nam
@@ -24,13 +24,13 @@
                 </span>
               </div>
               <div class="footer-contact-item">
-                <img src="/icons/footer-phone.webp" alt="icon phone" class="footer-icon" />
+                <i class="fa-solid fa-phone footer-icon" style="color: #fff; font-size: 18px;"></i>
                 <span class="footer-contact-text">
                   <a href="tel:02836363888" class="footer-link">028.3636.3888</a>
                 </span>
               </div>
               <div class="footer-contact-item">
-                <img src="/icons/footer-mail.webp" alt="icon mail" class="footer-icon" />
+                <i class="fa-solid fa-envelope footer-icon" style="color: #fff;"></i>
                 <span class="footer-contact-text">
                   <a href="mailto:info@reallogistics.vn" class="footer-link">info@reallogistics.vn</a>
                 </span>
@@ -127,7 +127,7 @@
       <div class="footer-bar-container">
         <div class="footer-bar-content">
           <div class="footer-copyright">
-            Copyright © 2026 Real Logistics Co., Ltd. All Rights Reserved
+            Copyright © 2026 Beacon Global Logistics Co., Ltd. All Rights Reserved
           </div>
         </div>
       </div>
@@ -143,11 +143,12 @@ const scrollToTop = () => {
 
 <style scoped>
 .avo-custom-footer[data-v-4896eafd] {
-    background: radial-gradient(ellipse 60% 58% at 16% 14%, #ffffff 0%, #ffffff 20%, rgba(0, 77, 115, 0.4) 30%, rgba(0, 61, 96, 0.75) 89%, #003d5c 121%);
+    background: radial-gradient(ellipse 40% 65% at 16% 16%, #ffffff 0%, #ffffff 21%, rgba(0, 77, 115, 0.4) 28%, rgba(0, 61, 96, 0.75) 89%, #003d5c 121%);
     color: #FF9900;
     width: 100%;
     position: relative;
-    padding: 40px 0 0;
+    padding: 35px 0 0;
+    margin-top: 5%;
 }
 
 .footer-container {
@@ -179,6 +180,7 @@ const scrollToTop = () => {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
+  margin-left: -0.5%;
 }
 
 .footer-col {
@@ -194,7 +196,7 @@ const scrollToTop = () => {
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 600;
-  color: #fff;
+  color: #e9c864;
   margin-bottom: 20px;
 }
 
@@ -214,7 +216,7 @@ const scrollToTop = () => {
   width: 24px;
   height: 24px;
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 5px;
 }
 
 .footer-contact-text {
@@ -232,7 +234,7 @@ const scrollToTop = () => {
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 600;
-  color: #fff;
+  color: #e9c864;
 }
 
 
@@ -252,14 +254,14 @@ const scrollToTop = () => {
 .footer-link {
   font-family: 'Poppins';
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.7);
+  color: #fff;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
   line-height: 1.6;
 }
 
 .footer-link:hover {
-  color: #FF9900;
+  color: black;
 }
 
 .footer-link.router-link-active,
@@ -316,7 +318,7 @@ const scrollToTop = () => {
 .footer-social-svg {
   position: relative;
   z-index: 20;
-  color: #026937;
+  color: #0170A7;
   transition: color 0.3s ease-in-out;
   font-size: 18px;
 }
@@ -327,11 +329,11 @@ const scrollToTop = () => {
 
 /* WhatsApp và WeChat có màu riêng */
 .footer-social-icon-whatsapp .footer-social-svg {
-  color: #25D366;
+  color: #0170A7;
 }
 
 .footer-social-icon-wechat .footer-social-svg {
-  color: #07C160;
+  color: #0170A7;
 }
 
 /* WhatsApp và WeChat không có hover effect vì đã có màu sẵn */

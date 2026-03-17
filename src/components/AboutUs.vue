@@ -14,7 +14,7 @@
       <div class="relative z-10 flex items-center h-full">
         <div class="container">
           <div>
-            <h1 class="text-white display-1">About Minelog</h1>
+            <h1 class="text-white display-1">About Beacon</h1>
           </div>
           <div class="description title-3 text-white mt-4">
             We are a Total Logistics Solution Provider with a reputation for consistency, quality and reliability in delivering services to our global clients.
@@ -33,14 +33,17 @@
                 <div class="wpb_wrapper">
                   <h2>We Are a Total Logistics Solution Provider.</h2>
                   <p>
-                    Determined to make a difference and bring total logistics solutions to the industry,
-                    Mr. Dereck Ng and Mr. Hong Yeow formed Mine Logistics Sdn. Bhd. (Minelog) in 2009.
-                    Despite its humble beginnings as a small freight forwarding company with just five
-                    employees, Minelog has grown to become one of Malaysia's most trusted one-stop total
-                    logistics solution providers, with over 150 experienced employees offering the most
-                    comprehensive logistics services. We're accredited as an International Integrated
-                    Logistics Services (IILS) provider and have successfully acquired ISO 9001:2015
-                    certification.
+                    Beacon Global Logistics – Professional logistics solutions, connecting globally – is a provider of domestic and international logistics services. We are committed to delivering fast, safe, and efficient transportation solutions, flexibly meeting customer needs in the context of an increasingly dynamic global trade environment.
+                    <br><br>
+                    Founded by a leadership team with strong dedication and extensive experience in the logistics industry, Beacon Global Logistics continuously invests in improving service quality, standardizing operational processes, and expanding its partner network. As a result, the company has gradually become a trusted logistics partner for many customers nationwide.
+                    <br><br>
+                    Although a young company in terms of establishment, Beacon Global Logistics has quickly affirmed its position by maximizing the capabilities of its core team, combined with a well-structured business strategy and a long-term development vision.
+                    <br><br>
+                    Throughout its growth journey, Beacon Global Logistics consistently places credibility, service quality, and customer satisfaction at the core, thereby building a professional, flexible, and sustainable logistics brand.
+                    <br><br>
+                    By 2030, Beacon Global Logistics aims to become a multinational logistics enterprise, providing comprehensive logistics services to customers across Vietnam and Southeast Asia.
+                    Beacon Global Logistics is committed to delivering professional and reliable logistics solutions that help businesses optimize costs, shorten lead times, and enhance efficiency in import and export operations.
+                    With a comprehensive service ecosystem including ocean freight, air freight, domestic transportation, customs clearance, and warehousing, Beacon Global Logistics delivers end-to-end logistics solutions that help businesses optimize costs, shorten transit times, and ensure cargo safety. We are proud to be a pioneering international freight forwarder in Vietnam, ready to accompany businesses in an era of integration and sustainable development.
                   </p>
                 </div>
               </div>

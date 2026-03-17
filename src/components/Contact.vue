@@ -48,7 +48,7 @@
                 <div class="wpb_wrapper">
                   <div class="wpb_map_wraper">
                     <iframe 
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d149141.000542373!2d106.58932294282903!3d10.801419331720126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529292e8d3dd1%3A0xf15f5aad773c112b!2sHo%20Chi%20Minh%20City%2C%20Vietnam!5e0!3m2!1sen!2s!4v1768370722681!5m2!1sen!2s" 
+                      src="https://maps.google.com/maps?q=B4.01.05+Hoang+Anh+Gold+House+187A+L%C3%AA+V%C4%83n+L%C6%B0%C6%A0ng+Nh%C3%A0+B%C3%A8+TP+HCM&output=embed" 
                       width="100%" 
                       height="410" 
                       style="border:0;" 

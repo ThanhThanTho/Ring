@@ -20,10 +20,6 @@
                     {{ heroWords[heroWordIndex] }}
                   </h2>
                 </transition>
-                <p class="slider-text">
-                  Minelog is a One-Stop Total Logistics Solution Provider, focused on customer
-                  needs.
-                </p>
                 <div class="btn-relative">
                   <router-link to="/support">
                     Get Started
@@ -59,7 +55,7 @@
                               decoding="async" 
                               width="150" 
                               height="150" 
-                              src="https://minelog.com.my/wp-content/uploads/2022/07/teamwork-150x150.png" 
+                              src="/images/teamwork.png" 
                               class="vc_single_image-img attachment-thumbnail" 
                               alt="teamwork" 
                               title="teamwork"
@@ -87,7 +83,7 @@
                               decoding="async" 
                               width="150" 
                               height="150" 
-                              src="https://minelog.com.my/wp-content/uploads/2022/07/personal-growth-150x150.png" 
+                              src="/images/grow.png" 
                               class="vc_single_image-img attachment-thumbnail" 
                               alt="personal growth" 
                               title="personal growth"
@@ -115,7 +111,7 @@
                               decoding="async" 
                               width="150" 
                               height="150" 
-                              src="https://minelog.com.my/wp-content/uploads/2022/09/icon-3-150x150.png" 
+                              src="/images/box.png" 
                               class="vc_single_image-img attachment-thumbnail" 
                               alt="efficiency" 
                               title="icon-3"

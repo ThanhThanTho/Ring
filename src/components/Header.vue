@@ -15,13 +15,13 @@
                 alt="Logo"
                 class="logo1 avo-logo-dark"
                 style="height: 70px"
-                src="/images/logo.jpg"
+                src="/images/logo.png"
               />
               <img
                 alt="Logo"
                 class="logo1 avo-logo-light"
                 style="height: 70px"
-                src="/images/logo.jpg"
+                src="/images/logo.png"
               />
             </router-link>
           </div>
@@ -76,7 +76,7 @@
             <a class="search" href="#" @click.prevent="toggleSearch">
               <i class="fa fa-search"></i>
             </a>
-            <!-- Minelog:: Custom search box -->
+            <!-- Custom search box -->
             <div class="black-search-block" :class="{ active: isSearchOpen }">
               <div class="black-search-table">
                 <div class="black-search-table-cell">
@@ -108,7 +108,7 @@
             </a>
             <div class="fat-nav" :class="{ active: isMobileMenuOpen }">
               <router-link to="/" @click="closeMobileMenu">
-                <img src="/images/logo.jpg" alt="Logo" />
+                <img src="/images/logo.png" alt="Logo" />
               </router-link>
               <div class="fat-nav__wrapper">
                 <form role="search" method="get" id="search-form-2" class="searchform" @submit.prevent="handleSearch">

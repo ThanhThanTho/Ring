@@ -21,7 +21,7 @@
           <div class="slider-box">
             <div class="caption-box clearfix">
               <div class="slider-content">
-                <h3 class="hero-heading-prefix">All-in-one logistics for</h3>
+                <h3 class="hero-heading-prefix"></h3>
                 <transition name="hero-text-fade" mode="out-in">
                   <h2
                     class="hero-heading-main"
@@ -31,8 +31,7 @@
                   </h2>
                 </transition>
                 <p class="slider-text">
-                  Minelog is a One-Stop Total Logistics Solution Provider, focused on customer
-                  needs.
+                  
                 </p>
                 <div class="btn-relative">
                   <router-link to="/support">
@@ -232,17 +231,17 @@ const heroImages = ref([
   '/images/home-slider-2.jpg',
   '/images/home-slider-3.jpg',
   '/images/home-slider-4.jpg',
-  '/images/home-slider-5.jpg'
+  '/images/home-slider-5.png'
 ])
 
 const heroWords = ref([
-  'FMCG.',
-  'rubber gloves.',
-  'industrial products.',
-  'auto parts.',
-  'household products.',
-  'renewable energy products.',
-  'commodity.'
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  ''
 ])
 const heroWordIndex = ref(0)
 const HERO_TEXT_INTERVAL = 3000
@@ -259,8 +258,8 @@ const insights = ref([
 ])
 
 const testimonials = ref([
-  { id: 1, number: '01', title: 'Excellent Service', content: 'MINELOG provided exceptional service throughout our partnership.', name: 'John Doe', position: 'CEO, Company Name' },
-  { id: 2, number: '02', title: 'Reliable Partner', content: 'We trust MINELOG for all our logistics needs.', name: 'Jane Smith', position: 'Operations Manager' }
+  { id: 1, number: '01', title: 'Excellent Service', content: 'BEACON provided exceptional service throughout our partnership.', name: 'John Doe', position: 'CEO, Company Name' },
+  { id: 2, number: '02', title: 'Reliable Partner', content: 'We trust BEACON for all our logistics needs.', name: 'Jane Smith', position: 'Operations Manager' }
 ])
 
 // Associations logos (5 logos)
@@ -497,16 +496,19 @@ onUnmounted(() => {
   font-size: 18px;
   line-height: 140%;
   text-align: center;
-  color: #FBFBFB;
-  background: unset;
-  border: unset;
-  padding: 0px;
+  color: #000;                 /* chữ đen */
+  background: #fff;            /* nền trắng */
+  border-radius: 8px;          /* bo góc nhẹ */
+  padding: 10px 24px;          /* tạo khoảng cách cho nút */
   text-decoration: none;
+  display: inline-block;       /* giúp nút hiển thị đẹp */
+  transition: all 0.3s ease;   /* hiệu ứng mượt */
+  margin-top: 30%;
 }
 
 .home-page-section-1 .btn-relative a:hover {
-  background: unset;
-  color: #fff;
+  background: white;
+  color: #0170A7;
 }
 
 .hero-slider-controls {
