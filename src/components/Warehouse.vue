@@ -78,7 +78,7 @@
           <div class="overview-content-col">
             <h2 class="overview-heading">Overview</h2>
             <div class="overview-text">
-              We provide comprehensive warehousing and distribution services designed to meet your storage and inventory management needs. Our modern facilities offer secure storage, efficient inventory management, and flexible solutions for various types of goods. With strategic locations and advanced warehouse management systems, Real Logistics ensures optimal space utilization, accurate inventory tracking, and timely order fulfillment for your business.
+              We provide comprehensive warehousing and distribution services designed to meet your storage and inventory management needs. Our modern facilities offer secure storage, efficient inventory management, and flexible solutions for various types of goods. With strategic locations and advanced warehouse management systems, Beacon Global Logistics ensures optimal space utilization, accurate inventory tracking, and timely order fulfillment for your business.
             </div>
           </div>
         </div>

@@ -91,7 +91,13 @@
                         </strong>
                       </font>
                       <br><br>
-                      We'd love to help support your business, add value, and provide the supply chain solution you need. Let's discuss about the ways we can help.
+                      Mr. Tony
+                      <br/>
+                      General Director
+                      <br/>
+                      <i class="fa-solid fa-phone footer-icon" style="color: #0170A7; font-size: 18px;"></i> +84 399 827 179 (Zalo/WhatsApp/Wechat)
+                      <br/>
+                      <i class="fa-solid fa-envelope footer-icon" style="color: #0170A7; font-size: 18px;"></i> tony@beacon-logistics.com.vn
                     </div>
                     <div style="text-align:left;">
                       <a class="wsite-button wsite-button-small wsite-button-highlight" href="/contact">
@@ -122,7 +128,13 @@
                         </strong>
                       </font>
                       <br><br>
-                      We'd love to help support your business, add value, and provide the supply chain solution you need. Let's discuss about the ways we can help.
+                      Mr. Peter
+                      <br/>
+                      Vice Director
+                      <br/>
+                      <i class="fa-solid fa-phone footer-icon" style="color: #0170A7; font-size: 18px;"></i> +84 868 486 975 ( What'sapp, Wechat )
+                      <br/>
+                      <i class="fa-solid fa-envelope footer-icon" style="color: #0170A7; font-size: 18px;"></i> peter@beacon-logistics.com.vn
                     </div>
                     <div style="text-align:left;">
                       <a class="wsite-button wsite-button-small wsite-button-highlight" href="/contact">

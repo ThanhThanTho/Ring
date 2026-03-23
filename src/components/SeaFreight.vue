@@ -78,7 +78,7 @@
           <div class="overview-content-col">
             <h2 class="overview-heading">Overview</h2>
             <div class="overview-text">
-              We are committed to offering complete ocean freight services that focus on meeting your shipping needs. Whether your cargo is going near or far, our flexible and environmentally friendly solutions make sure everything runs smoothly. With connections to ports all over the world, Real Logistics is a reliable choice for Full Container Load (FCL) and Less than Container Load (LCL) services.
+              We are committed to offering complete ocean freight services that focus on meeting your shipping needs. Whether your cargo is going near or far, our flexible and environmentally friendly solutions make sure everything runs smoothly. With connections to ports all over the world, Beacon Global Logistics is a reliable choice for Full Container Load (FCL) and Less than Container Load (LCL) services.
             </div>
           </div>
         </div>

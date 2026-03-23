@@ -78,7 +78,7 @@
           <div class="overview-content-col">
             <h2 class="overview-heading">Overview</h2>
             <div class="overview-text">
-              We provide comprehensive customs clearance services to streamline your import and export processes. Our experienced team handles all documentation, regulatory compliance, and customs procedures efficiently. With deep knowledge of customs regulations and established relationships with customs authorities, Real Logistics ensures fast clearance, reduced costs, and minimized risk for your international trade operations.
+              We provide comprehensive customs clearance services to streamline your import and export processes. Our experienced team handles all documentation, regulatory compliance, and customs procedures efficiently. With deep knowledge of customs regulations and established relationships with customs authorities, Beacon Global Logistics ensures fast clearance, reduced costs, and minimized risk for your international trade operations.
             </div>
           </div>
         </div>

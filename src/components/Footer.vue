@@ -1,9 +1,9 @@
 <template>
-  <footer class="avo-custom-footer clearfix">
+  <footer ref="footerEl" class="avo-custom-footer clearfix">
     <div class="footer-container">
       <div class="footer-content">
         <!-- Logo -->
-        <router-link to="/" class="footer-logo-link" @click="scrollToTop">
+        <router-link ref="logoEl" to="/" class="footer-logo-link" @click="scrollToTop">
           <!-- Dùng tạm logo hiện có trong project -->
           <img src="/images/logo.png" alt="logo footer" loading="lazy" class="footer-logo-img" />
         </router-link>
@@ -19,20 +19,20 @@
                 <i class="fas fa-location-dot footer-icon" style="color: #fff;"></i>
                 <span class="footer-contact-text">
                   <a href="https://maps.app.goo.gl/AmbFRs665pVeQs718" target="_blank" rel="noopener noreferrer nofollow" class="footer-link">
-                    39 - 41, Đường B4, Phường An Khánh, TP. Hồ Chí Minh, Việt Nam
+                    Commercial Service House No. 1.5, B4 Area, Phuoc Kien Residential Area (Hoang Anh Gold House), Le Van Luong St., Nha Be Commune, Ho Chi Minh City, Vietnam
                   </a>
                 </span>
               </div>
               <div class="footer-contact-item">
                 <i class="fa-solid fa-phone footer-icon" style="color: #fff; font-size: 18px;"></i>
                 <span class="footer-contact-text">
-                  <a href="tel:02836363888" class="footer-link">028.3636.3888</a>
+                  <a href="tel:02836363888" class="footer-link">0383866797</a>
                 </span>
               </div>
               <div class="footer-contact-item">
                 <i class="fa-solid fa-envelope footer-icon" style="color: #fff;"></i>
                 <span class="footer-contact-text">
-                  <a href="mailto:info@reallogistics.vn" class="footer-link">info@reallogistics.vn</a>
+                  <a href="mailto:info@reallogistics.vn" class="footer-link">tony@beacon-logistics.com.vn</a>
                 </span>
               </div>
             </div>
@@ -136,25 +136,99 @@
 </template>
 
 <script setup>
+import { nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
+
+const footerEl = ref(null)
+const logoEl = ref(null)
+
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
+
+const updateGlowAnchor = () => {
+  const footer = footerEl.value
+  const logo = logoEl.value?.$el ?? logoEl.value
+  if (!footer || !logo) return
+
+  const footerRect = footer.getBoundingClientRect()
+  const logoRect = logo.getBoundingClientRect()
+
+  // Anchor theo tâm logo, tính theo hệ tọa độ của footer
+  const x = logoRect.left - footerRect.left + logoRect.width / 2
+  const y = logoRect.top - footerRect.top + logoRect.height / 2
+
+  footer.style.setProperty('--glow-x', `${Math.round(x)}px`)
+  footer.style.setProperty('--glow-y', `${Math.round(y)}px`)
+}
+
+let resizeObserver
+onMounted(async () => {
+  await nextTick()
+  updateGlowAnchor()
+
+  window.addEventListener('resize', updateGlowAnchor, { passive: true })
+  window.addEventListener('scroll', updateGlowAnchor, { passive: true })
+
+  // Bắt các thay đổi layout ảnh hưởng vị trí logo/footer
+  if (window.ResizeObserver) {
+    resizeObserver = new ResizeObserver(() => updateGlowAnchor())
+    if (footerEl.value) resizeObserver.observe(footerEl.value)
+    const logo = logoEl.value?.$el ?? logoEl.value
+    if (logo) resizeObserver.observe(logo)
+  }
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', updateGlowAnchor)
+  window.removeEventListener('scroll', updateGlowAnchor)
+  if (resizeObserver) resizeObserver.disconnect()
+})
 </script>
 
 <style scoped>
-.avo-custom-footer[data-v-4896eafd] {
-    background: radial-gradient(ellipse 40% 65% at 16% 16%, #ffffff 0%, #ffffff 21%, rgba(0, 77, 115, 0.4) 28%, rgba(0, 61, 96, 0.75) 89%, #003d5c 121%);
-    color: #FF9900;
-    width: 100%;
-    position: relative;
-    padding: 35px 0 0;
-    margin-top: 5%;
+.avo-custom-footer {
+  background-color: #003d5c;
+  color: #FF9900;
+  width: 100%;
+  position: relative;
+  padding: 35px 0 0;
+  margin-top: 5%;
+  --glow-x: 315px;
+  --glow-y: 16%;
+}
+
+.avo-custom-footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    /* Vòng sáng chính quanh logo */
+    radial-gradient(
+      ellipse 740px 330px at var(--glow-x) var(--glow-y),
+      rgba(255, 255, 255, 0.98) 0%,
+      rgba(255, 255, 255, 0.92) 21%,
+      rgba(0, 77, 115, 0.4) 29%,
+      rgba(0, 61, 96, 0.75) 69%,
+      rgba(0, 61, 92, 0) 150%
+    ),
+    /* Vòng trắng rất nhạt lan rộng (tới vùng cột Beacon) */
+    radial-gradient(
+      ellipse 1200px 520px at var(--glow-x) var(--glow-y),
+      rgba(255, 255, 255, 0.18) 65%,
+      rgba(255, 255, 255, 0.10) 75%,
+      rgba(255, 255, 255, 0.05) 88%,
+      rgba(255, 255, 255, 0.00) 79%
+    );
 }
 
 .footer-container {
   max-width: 80%;
   margin: 0 auto;
   padding: 0 40px;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-content {
@@ -164,9 +238,10 @@ const scrollToTop = () => {
 }
 
 .footer-logo-link {
-  display: block;
+  0display: block;
   max-width: 180px;
   width: 100%;
+  position: relative;
 }
 
 .footer-logo-img {
@@ -174,6 +249,8 @@ const scrollToTop = () => {
   height: auto;
   object-fit: cover;
   scale: 1.5;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-grid {
@@ -350,14 +427,7 @@ const scrollToTop = () => {
 /* Responsive */
 @media (max-width: 991px) {
   .avo-custom-footer {
-    background: radial-gradient(
-      ellipse 100% 70% at 15% 22%,
-      #ffffff 0%,
-      #ffffff 20%,
-      rgba(0, 77, 115, 0.4) 50%,
-      rgba(0, 61, 96, 0.75) 75%,
-      #003d5c 100%
-    );
+    background-color: #003d5c;
     padding: 30px 0 0;
   }
 
@@ -379,7 +449,6 @@ const scrollToTop = () => {
   }
 
   .footer-col-2,
-  .footer-col-3,
   .footer-col-4 {
     padding-left: 120px;
   }
@@ -418,7 +487,6 @@ const scrollToTop = () => {
   }
 
   .footer-section-header {
-    padding: 0 6px;
   }
 
   .footer-links {

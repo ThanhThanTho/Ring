@@ -78,7 +78,7 @@
           <div class="overview-content-col">
             <h2 class="overview-heading">Overview</h2>
             <div class="overview-text">
-              We offer comprehensive land freight services designed to meet your overland transportation needs. Our road and rail freight solutions ensure reliable delivery across domestic and international routes. With a modern fleet of vehicles and strategic partnerships, Real Logistics provides flexible scheduling, real-time tracking, and cost-effective solutions for full truckload (FTL) and less than truckload (LTL) shipments.
+              We offer comprehensive land freight services designed to meet your overland transportation needs. Our road and rail freight solutions ensure reliable delivery across domestic and international routes. With a modern fleet of vehicles and strategic partnerships, Beacon Global Logistics provides flexible scheduling, real-time tracking, and cost-effective solutions for full truckload (FTL) and less than truckload (LTL) shipments.
             </div>
           </div>
         </div>

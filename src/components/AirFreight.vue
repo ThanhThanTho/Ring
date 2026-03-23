@@ -78,7 +78,7 @@
           <div class="overview-content-col">
             <h2 class="overview-heading">Overview</h2>
             <div class="overview-text">
-              We provide comprehensive air freight services designed to meet your urgent shipping requirements. Our air cargo solutions ensure fast transit times and reliable delivery to destinations worldwide. With strategic partnerships with major airlines and access to extensive airport networks, Real Logistics offers competitive rates and excellent service for both express and standard air freight shipments.
+              We provide comprehensive air freight services designed to meet your urgent shipping requirements. Our air cargo solutions ensure fast transit times and reliable delivery to destinations worldwide. With strategic partnerships with major airlines and access to extensive airport networks, Beacon Global Logistics offers competitive rates and excellent service for both express and standard air freight shipments.
             </div>
           </div>
         </div>
