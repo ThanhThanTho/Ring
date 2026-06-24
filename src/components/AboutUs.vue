@@ -99,10 +99,10 @@
           <div class="wpb_text_column wpb_content_element">
             <div class="wpb_wrapper">
               <h2>Our Values</h2>
-              <p class="value-line">Maximise values and services</p>
+              <p class="value-line">Maximize values and services</p>
               <p class="value-line">Integrate solutions just for you</p>
               <p class="value-line">Network foundation worldwide</p>
-              <p class="value-line">Effectively &amp; Efficiently</p>
+              <p class="value-line">Effective &amp; Efficient</p>
             </div>
           </div>
         </div>
