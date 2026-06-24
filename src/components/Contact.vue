@@ -93,7 +93,7 @@
                       <br><br>
                       Mr. Tony
                       <br/>
-                      General Director
+                      Director
                       <br/>
                       <i class="fa-solid fa-phone footer-icon" style="color: #0170A7; font-size: 18px;"></i> +84 399 827 179 (Zalo/WhatsApp/Wechat)
                       <br/>

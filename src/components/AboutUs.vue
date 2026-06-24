@@ -344,8 +344,8 @@
 
 .vmv-col-text p {
   font-family: 'Poppins';
-  font-size: 15px;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 600;
   line-height: 1.6;
   color: #4F5F58;
   margin: 0;
@@ -443,7 +443,7 @@
   }
 
   .vmv-col-text p {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .vmv-col-values-title h1 {
@@ -543,7 +543,7 @@
   }
 
   .vmv-col-text p {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .vmv-col-values-title {
