@@ -18,7 +18,7 @@
                 <!-- Thay icon path bằng logo tạm để tránh lỗi import, có thể đổi lại khi có file icon -->
                 <i class="fas fa-location-dot footer-icon" style="color: #fff;"></i>
                 <span class="footer-contact-text">
-                  <a href="https://maps.app.goo.gl/AmbFRs665pVeQs718" target="_blank" rel="noopener noreferrer nofollow" class="footer-link">
+                  <a href="https://maps.app.goo.gl/dyCPZSrqBW847dx56" target="_blank" rel="noopener noreferrer nofollow" class="footer-link">
                     Commercial Service House No. 1.5, B4 Area, Phuoc Kien Residential Area (Hoang Anh Gold House), Le Van Luong St., Nha Be Commune, Ho Chi Minh City, Vietnam
                   </a>
                 </span>
